@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>部署文档</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Menu</div>
+<div class="menu-item"><a href="index.html">Home&nbsp;-&nbsp;demo</a></div>
+<div class="menu-item"><a href="example.html" class="current">Deployment</a></div>
+<div class="menu-category">Links</div>
+<div class="menu-item"><a href="http://jemdoc.jaboc.net/">Jemdoc</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>部署文档</h1>
+</div>
+<h2>本文档将介绍如何搭建 GitHub.io 博客，并部署基于 jemdoc 的学术风格博客</h2>
+<p><a href="https://github.com/Y-boy/Y-boy.github.io">博客项目代码</a> <br />
+<a href="https://zhuanlan.zhihu.com/p/161087743">[参考，知乎 - Jemdoc + Github.io + Mac搭建个人学术主页]</a> <br /></p>
+<h2>提前准备</h2>
+<ul>
+<li><p>安装 Python，用于执行 jemdoc.py 脚本</p>
+</li>
+</ul>
+<h2>搭建 GitHub 博客</h2>
+<p><a href="https://blog.csdn.net/qq_34106574/article/details/82704883">[参考，CSDN - 搭建自己的github.io博客]</a> <br /></p>
+<ol>
+<li><p>新建一个命名为 <tt>{YOUR_NAME}.github.io</tt> 代码库</p>
+</li>
+<li><p>进入 "设置（setting）" -&gt; "页面（Pages）" 完成配置</p>
+</li>
+<li><p>当页面显示 <tt>"Your site is published at https:<i></i>{YOUR_NAME}.github.io/"</tt> 时，便可直接访问该域名。</p>
+</li>
+</ol>
+<h2>编辑基于 jemdoc 的学术风格博客页面</h2>
+<ol>
+<li><p>拉取仓库代码到本地，进入该项目目录，准备编辑（原来的初始化仓库时生成的文件都可以删掉）</p>
+</li>
+<li><p>从 <a href="http://jemdoc.jaboc.net/index.html">jemdoc 官网</a> 下载 <a href="http://jemdoc.jaboc.net/dist/jemdoc.py">jemdoc.py</a> 和 <a href="http://jemdoc.jaboc.net/dist/jemdoc.css">jemdoc.css</a> 两个文件，存到项目目录下</p>
+</li>
+<li><p>创建空的模板文件 <tt>index.jemdoc</tt>，按照<a href="https://github.com/Y-boy/Y-boy.github.io/blob/master/example.jemdoc">示例模板</a>或<a href="http://jemdoc.jaboc.net/example.html">教程</a>的案例编辑内容</p>
+</li>
+<li><p>执行命令 <tt># python jemdoc.py index.jemdoc</tt>，将编译得到最终使用的 <tt>html</tt> 文件（每次更新了 <tt>.jemdoc</tt> 模板文件后都要执行一次该命令以刷新 <tt>html</tt> 文件）</p>
+</li>
+<li><p>将更新的文件提交到 GitHub 仓库上，重新访问博客页面 （<tt>https:<i></i>{YOUR_NAME}.github.io</tt>）</p>
+</li>
+</ol>
+<h2>附：一些细节</h2>
+<h3>关于图片</h3>
+<p>在项目目录下创建 <tt>/pictures</tt> 目录，用于存放所有图片，当图片上传至 GitHub 仓库之后可以查看该图片的 URL，之后再写到文档模板中，可参考<a href="https://github.com/Y-boy/Y-boy.github.io/blob/master/example.jemdoc">示例模板</a>中关于插入图片的语句。<br /></p>
+<h3>关于菜单</h3>
+<ul>
+<li><p>创建空的菜单文件 <tt>MENU</tt> ，编辑内容如下</p>
+</li>
+</ul>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+menu 1
+  home      [index.html]
+  about me  [me.html]
+menu 2
+  link      [http://jemdoc.jaboc.net/]
+</pre></div></div>
+<ul>
+<li><p>在需要关联菜单的 <tt>.jemdoc</tt> 模板文件上，首行使用语句 <tt>jemdoc: menu{MENU} {CURRENT_FILE_NAME.html}</tt> ，表示在所生成的 <tt>html</tt>文件中附上菜单</p>
+</li>
+</ul>
+<h3>关于网络</h3>
+<p>建议在科学上网的条件下访问 GitHub </p>
+</td>
+</tr>
+</table>
+</body>
+</html>
