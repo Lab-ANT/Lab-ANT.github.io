@@ -1,0 +1,45 @@
+# ANT Lab member data
+# Source: Tencent Docs member collection
+# Facts such as title, year, email, publications and awards must come from the source document.
+# English names/translations may be generated and then manually corrected when necessary.
+
+title_order:
+  "教授": 1
+  "副教授": 2
+  "讲师": 3
+  "博士后": 4
+  "博士(已毕业)": 5
+  "博士研究生": 6
+  "硕士(已毕业)": 7
+  "硕士研究生": 8
+  "本科生": 9
+
+people:
+  - id: "mengxuan-luo"
+
+    name_zh: "罗梦轩"
+    name_en: "Mengxuan Luo"
+
+    title_zh: "博士研究生"
+    title_en: "Ph.D. Student"
+    year: 2025
+
+    email: "luomengxuan21a@nudt.edu.cn"
+    homepage: ""
+
+    research:
+      zh:
+        - "具身智能安全"
+      en:
+        - "Embodied AI Safety"
+
+    education:
+      - zh: "2021.09–2025.06 国防科技大学计算机学院，学士"
+        en: "2021.09–2025.06 B.S., College of Computer Science and Technology, National University of Defense Technology"
+      - zh: "2025.09–至今 国防科技大学计算机学院，博士研究生"
+        en: "2025.09–Present Ph.D. Student, College of Computer Science and Technology, National University of Defense Technology"
+
+    publications: []
+    awards: []
+
+    photo: "mengxuan-luo.jpg"
