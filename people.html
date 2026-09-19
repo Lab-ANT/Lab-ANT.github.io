@@ -1,10 +1,12 @@
+---
+---
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<link rel="stylesheet" href="assets/css/people.css" type="text/css" />
 <title>People</title>
 </head>
 <body>
@@ -19,43 +21,106 @@
 <div class="menu-category">Links</div>
 <div class="menu-item"><a href="http://jemdoc.jaboc.net/">Jemdoc</a></div>
 </td>
+
 <td id="layout-content">
+<div class="people-page">
 <div id="toptitle">
 <h1>People</h1>
 </div>
-<h2>Faculty</h2>
-<ul>
-<li><p><b>Zhiping Cai</b>: Professor in Computer Science</p>
-</li>
-</ul>
-<h2>Post-Docs</h2>
-<ul>
-<li><p><b>Tongqing Zhou</b></p>
-</li>
-</ul>
-<h2>Students</h2>
-<h4>Ph.D. Students</h4>
-<ul>
-<li><p>HaiWen Chen</p>
-</li>
-<li><p>Shan Zhao</p>
-</li>
-</ul>
-<h4>Master Students</h4>
-<ul>
-<li><p>Chengyu Wang</p>
-</li>
-<li><p>Tao Yang</p>
-</li>
-<li><p>Changsheng Hou</p>
-</li>
-<li><p>Yipeng Wang</p>
-</li>
-<li><p>Rui Luo</p>
-</li>
-<li><p>Le Lai</p>
-</li>
-</ul>
+
+<p class="people-intro">
+Members of ANT Lab are listed by academic title or degree status, and then by joining/enrollment year.
+</p>
+
+<div class="people-list">
+{% assign category_order = "教授|副教授|讲师|博士后|博士(已毕业)|博士研究生|硕士(已毕业)|硕士研究生|本科生" | split: "|" %}
+
+{% for category in category_order %}
+  {% assign members = site.data.people.people | where: "title_zh", category | sort: "year" %}
+  {% for person in members %}
+  <div class="person-card">
+
+    <div class="person-photo-wrap">
+      {% if person.photo and person.photo != "" %}
+      <img class="person-photo"
+           src="assets/images/people/{{ person.photo }}"
+           alt="{{ person.name_en }}" />
+      {% endif %}
+    </div>
+
+    <div class="person-info">
+      <h2 class="person-name">
+        {{ person.name_en }}
+        <span class="person-name-zh">{{ person.name_zh }}</span>
+      </h2>
+
+      <div class="person-meta">
+        {{ person.title_en }}
+        {% if person.year %}
+        &nbsp;&middot;&nbsp; {{ person.year }}
+        {% endif %}
+      </div>
+
+      {% if person.research.en and person.research.en.size > 0 %}
+      <div class="person-section">
+        <span class="person-section-title">Research Interests:</span>
+        <div class="person-tags">
+          {% for item in person.research.en %}
+          <span class="person-tag">{{ item }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if person.education and person.education.size > 0 %}
+      <div class="person-section">
+        <span class="person-section-title">Education:</span>
+        <ul class="person-list-plain">
+          {% for item in person.education %}
+          <li>{{ item.en }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if person.publications and person.publications.size > 0 %}
+      <div class="person-section">
+        <span class="person-section-title">Publications:</span>
+        <ul class="person-list-plain">
+          {% for item in person.publications %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if person.awards and person.awards.size > 0 %}
+      <div class="person-section">
+        <span class="person-section-title">Awards:</span>
+        <ul class="person-list-plain">
+          {% for item in person.awards %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      <div class="person-links">
+        {% if person.email and person.email != "" %}
+        <a href="mailto:{{ person.email }}">Email</a>
+        {% endif %}
+        {% if person.homepage and person.homepage != "" %}
+        <a href="{{ person.homepage }}" target="_blank">Homepage</a>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+  {% endfor %}
+{% endfor %}
+</div>
+
+</div>
 </td>
 </tr>
 </table>
