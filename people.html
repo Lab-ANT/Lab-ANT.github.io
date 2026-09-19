@@ -107,8 +107,9 @@ Members of ANT Lab are listed by academic title or degree status, and then by jo
 
       <div class="person-links">
         {% if person.email and person.email != "" %}
-        <a href="mailto:{{ person.email }}">Email</a>
+        <span class="person-email">{{ person.email }}</span>
         {% endif %}
+
         {% if person.homepage and person.homepage != "" %}
         <a href="{{ person.homepage }}" target="_blank">Homepage</a>
         {% endif %}
