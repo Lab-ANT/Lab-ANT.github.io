@@ -32,101 +32,116 @@
 Members of Cai's Lab are listed by academic title or degree status, and then by joining/enrollment year.
 </p>
 
-<div class="people-list">
 {% assign category_order = "教授|副教授|讲师|博士后|博士(已毕业)|博士研究生|硕士(已毕业)|硕士研究生|本科生" | split: "|" %}
 
 {% for category in category_order %}
   {% assign members = site.data.people.people | where: "title_zh", category | sort: "year" %}
-  {% for person in members %}
-  <div class="person-card">
+  {% if members.size > 0 %}
+    {% case category %}
+      {% when "教授" %}{% assign group_title = "Professors" %}
+      {% when "副教授" %}{% assign group_title = "Associate Professors" %}
+      {% when "讲师" %}{% assign group_title = "Lecturers" %}
+      {% when "博士后" %}{% assign group_title = "Postdoctoral Researchers" %}
+      {% when "博士(已毕业)" %}{% assign group_title = "Ph.D. Alumni" %}
+      {% when "博士研究生" %}{% assign group_title = "Ph.D. Students" %}
+      {% when "硕士(已毕业)" %}{% assign group_title = "Master's Alumni" %}
+      {% when "硕士研究生" %}{% assign group_title = "Master's Students" %}
+      {% when "本科生" %}{% assign group_title = "Undergraduate Students" %}
+    {% endcase %}
 
-    <div class="person-photo-wrap">
-      {% if person.photo and person.photo != "" %}
-      <img class="person-photo"
-           src="assets/images/people/{{ person.photo }}"
-           alt="{{ person.name_en }}" />
-      {% endif %}
-    </div>
-
-    <div class="person-info">
-      <h2 class="person-name">
-        {{ person.name_en }}
-        <span class="person-name-zh">{{ person.name_zh }}</span>
-      </h2>
-
-      <div class="person-meta">
-        {{ person.title_en }}
-        {% if person.year %}
-        &nbsp;&middot;&nbsp; {{ person.year }}
-        {% endif %}
-      </div>
-
-      {% if person.research.en and person.research.en.size > 0 %}
-      <div class="person-section">
-        <span class="person-section-title">Research Interests:</span>
-        <div class="person-tags">
-          {% for item in person.research.en %}
-          <span class="person-tag">{{ item }}</span>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-
-      {% if person.education and person.education.size > 0 %}
-      <div class="person-section">
-        <span class="person-section-title">Education:</span>
-        <ul class="person-list-plain">
-          {% for item in person.education %}
-          <li>{{ item.en }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-
-      {% if person.publications and person.publications.size > 0 %}
-      <div class="person-section">
-        <span class="person-section-title">Publications:</span>
-        <div class="person-publications">
-          {% for pub in person.publications %}
-            {% if pub.venue %}
-              <span class="publication-entry">
-                <strong>{{ pub.venue }}{% if pub.note and pub.note != "" %} ({{ pub.note }}){% endif %}</strong>
-                {% if pub.count %}&times; {{ pub.count }}{% endif %}
-              </span>{% unless forloop.last %}<span class="publication-separator">, </span>{% endunless %}
-            {% else %}
-              <span class="publication-entry">{{ pub }}</span>{% unless forloop.last %}<span class="publication-separator">, </span>{% endunless %}
+    <section class="people-group">
+      <h2 class="people-group-title">{{ group_title }}</h2>
+      <div class="people-list">
+      {% for person in members %}
+        <article class="person-card">
+          <div class="person-photo-wrap">
+            {% if person.photo and person.photo != "" %}
+            <img class="person-photo"
+                 src="assets/images/people/{{ person.photo }}"
+                 alt="{{ person.name_en }}" />
             {% endif %}
-          {% endfor %}
-        </div>
+          </div>
+
+          <div class="person-info">
+            <h3 class="person-name">
+              {{ person.name_en }}
+              <span class="person-name-zh">{{ person.name_zh }}</span>
+            </h3>
+
+            <div class="person-meta">
+              {{ person.title_en }}
+              {% if person.year %}
+              &nbsp;&middot;&nbsp; {{ person.year }}
+              {% endif %}
+            </div>
+
+            {% if person.research.en and person.research.en.size > 0 %}
+            <div class="person-section">
+              <span class="person-section-title">Research Interests:</span>
+              <div class="person-tags">
+                {% for item in person.research.en %}
+                <span class="person-tag">{{ item }}</span>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+
+            {% if person.education and person.education.size > 0 %}
+            <div class="person-section">
+              <span class="person-section-title">Education:</span>
+              <ul class="person-list-plain">
+                {% for item in person.education %}
+                <li>{{ item.en }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
+
+            {% if person.publications and person.publications.size > 0 %}
+            <div class="person-section">
+              <span class="person-section-title">Publications:</span>
+              <div class="person-publications">
+                {% for pub in person.publications %}
+                  {% if pub.venue %}
+                    <span class="publication-entry">
+                      <strong>{{ pub.venue }}{% if pub.note and pub.note != "" %} ({{ pub.note }}){% endif %}</strong>
+                      {% if pub.count %}&times; {{ pub.count }}{% endif %}
+                    </span>{% unless forloop.last %}<span class="publication-separator">, </span>{% endunless %}
+                  {% else %}
+                    <span class="publication-entry">{{ pub }}</span>{% unless forloop.last %}<span class="publication-separator">, </span>{% endunless %}
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+
+            {% if person.awards and person.awards.size > 0 %}
+            <div class="person-section">
+              <span class="person-section-title">Awards:</span>
+              <ul class="person-list-plain">
+                {% for item in person.awards %}
+                <li>{{ item }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
+
+            <div class="person-links">
+              {% if person.email and person.email != "" %}
+              <span class="person-email">{{ person.email }}</span>
+              {% endif %}
+
+              {% if person.homepage and person.homepage != "" %}
+              <a href="{{ person.homepage }}" target="_blank">Homepage</a>
+              {% endif %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
       </div>
-      {% endif %}
-
-      {% if person.awards and person.awards.size > 0 %}
-      <div class="person-section">
-        <span class="person-section-title">Awards:</span>
-        <ul class="person-list-plain">
-          {% for item in person.awards %}
-          <li>{{ item }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-
-      <div class="person-links">
-        {% if person.email and person.email != "" %}
-        <span class="person-email">{{ person.email }}</span>
-        {% endif %}
-
-        {% if person.homepage and person.homepage != "" %}
-        <a href="{{ person.homepage }}" target="_blank">Homepage</a>
-        {% endif %}
-      </div>
-    </div>
-
-  </div>
-  {% endfor %}
+    </section>
+  {% endif %}
 {% endfor %}
-</div>
 
 </div>
 </td>

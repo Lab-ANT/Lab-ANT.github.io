@@ -1,0 +1,41 @@
+# Homepage News
+# Current entries are a visual test using existing 2025 publications.
+# Exact acceptance dates are not available in the current source, so the year is shown.
+# Later, replace `date: "2025"` with the actual event date, e.g. "2025-08-18".
+
+news:
+  - date: "2025"
+    type: "publication"
+    venue: "TPAMI"
+    text: 'WAGE: Weight-sharing Attribute-missing Graph Autoencoder'
+    link: "Papers/2025/WAGE_Weight-Sharing_Attribute-Missing_Graph_Autoencoder.pdf"
+
+  - date: "2025"
+    type: "publication"
+    venue: "ICCV"
+    text: 'HumanSAM: Classifying Human-centric Forgery Videos in Human Spatial, Appearance, and Motion Anomaly'
+    link: "Papers/2025/Liu_HumanSAM_Classifying_Human-centric_Forgery_Videos_in_Human_Spatial_Appearance_and_ICCV_2025_paper.pdf"
+
+  - date: "2025"
+    type: "publication"
+    venue: "IEEE S&P"
+    text: "Prevalence Overshadows Concerns? Understanding Chinese Users' Privacy Awareness and Expectations Towards LLM-Based Healthcare Consultation"
+    link: "Papers/2025/Prevalence_Overshadows_Concerns_Understanding_Chinese_Users_Privacy_Awareness_and_Expectations_Towards_LLM-Based_Healthcare_Consultation.pdf"
+
+  - date: "2025"
+    type: "publication"
+    venue: "INFOCOM"
+    text: 'Pruning as Scanning: Towards Internet-Wide IPv6 Network Periphery Discovery'
+    link: "Papers/2025/Pruning_as_Scanning_Towards_Internet-Wide_IPv6_Network_Periphery_Discovery.pdf"
+
+  - date: "2025"
+    type: "publication"
+    venue: "AAAI"
+    text: 'Spatiotemporal-Aware Neural Fields for Dynamic CT Reconstruction'
+    link: "Papers/2025/Spatiotemporal-Aware Neural Fields for Dynamic CT Reconstruction.pdf"
+
+  - date: "2025"
+    type: "publication"
+    venue: "TNNLS"
+    text: 'Revisiting Initializing Then Refining: An Incomplete and Missing Graph Imputation Network'
+    link: "Papers/2025/Revisiting Initializing Then Refining An.pdf"

@@ -1,131 +1,123 @@
-/* People page styles for ANT Lab */
+/* People page styles */
 
 .people-page {
-  max-width: 1050px;
-  padding-bottom: 40px;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding-bottom: 24px;
 }
 
 .people-intro {
-  margin: 0 0 24px 0;
-  color: #555;
-  line-height: 1.65;
+  max-width: 760px;
+  margin: -14px 0 38px;
+  color: var(--muted, #657184);
+  font-size: 1.12rem;
+  line-height: 1.75;
+}
+
+.people-group {
+  margin: 0 0 48px;
+}
+
+.people-group-title {
+  margin: 0 0 8px;
+  padding: 0 0 13px;
+  border-bottom: 1px solid var(--border, #e3e8ef);
+  color: #1e293b;
+  font-size: 1.68rem;
+  font-weight: 740;
+  letter-spacing: -0.025em;
 }
 
 .people-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  margin-top: 18px;
 }
 
 .person-card {
-  display: flex;
-  gap: 26px;
-  padding: 22px;
-  border: 1px solid #e3e7ec;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 4px 16px rgba(20, 45, 80, 0.06);
+  display: grid;
+  grid-template-columns: 176px minmax(0, 1fr);
+  gap: 30px;
+  padding: 28px 0;
+  border-bottom: 1px solid #e9edf2;
+  background: transparent;
+}
+
+.person-card:last-child {
+  border-bottom: 0;
 }
 
 .person-photo-wrap {
-  flex: 0 0 170px;
+  width: 176px;
 }
 
 .person-photo {
-  width: 170px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 8px;
   display: block;
-  background: #eef1f5;
+  width: 176px;
+  height: 222px;
+  object-fit: cover;
+  border: 1px solid #e0e6ee;
+  border-radius: 11px;
+  background: #edf2f7;
+  box-shadow: 0 7px 18px rgba(30, 58, 95, 0.08);
 }
 
 .person-info {
-  flex: 1;
   min-width: 0;
+  padding-top: 2px;
 }
 
 .person-name {
-  margin: 0 0 6px 0;
+  margin: 0 0 5px;
   padding: 0;
-  border: none;
-  color: #1d467d;
-  font-size: 1.55em;
-  line-height: 1.2;
+  border: 0;
+  color: var(--primary, #1f4e79);
+  font-size: 1.72rem;
+  font-weight: 700;
+  line-height: 1.25;
 }
 
 .person-name-zh {
   margin-left: 8px;
-  color: #666;
-  font-size: 0.72em;
-  font-weight: normal;
+  color: #7a8695;
+  font-size: 0.68em;
+  font-weight: 500;
 }
 
 .person-meta {
-  margin-bottom: 14px;
-  color: #666;
-  font-size: 0.98em;
+  margin-bottom: 16px;
+  color: #667386;
+  font-size: 1.06rem;
 }
 
 .person-section {
-  margin-top: 12px;
+  margin-top: 13px;
+  color: #344154;
 }
 
 .person-section-title {
-  font-weight: bold;
-  color: #333;
+  display: inline-block;
+  margin-bottom: 4px;
+  color: #253247;
+  font-weight: 700;
 }
 
 .person-tags {
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 .person-tag {
   display: inline-block;
-  margin: 0 6px 6px 0;
-  padding: 4px 9px;
-  border-radius: 999px;
-  background: #eef4fb;
-  color: #315f94;
-  font-size: 0.9em;
-}
-
-.person-links {
-  margin-top: 14px;
-}
-
-.person-links span {
-  display: inline-block;
-  margin-right: 16px;
-}
-
-.person-email {
-  display: inline-block;
-  margin-right: 16px;
-  color: #444;
-}
-
-.person-publications {
-  margin-top: 6px;
-  line-height: 1.65;
-  color: #222;
-}
-
-.publication-entry {
-  white-space: normal;
-}
-
-.publication-entry strong {
-  font-weight: 600;
-}
-
-.publication-separator {
-  color: #666;
+  margin: 0 7px 7px 0;
+  padding: 3px 9px;
+  border: 1px solid #d6e1ee;
+  border-radius: 7px;
+  background: #f4f8fc;
+  color: #315f8e;
+  font-size: 0.98rem;
 }
 
 .person-list-plain {
-  margin: 6px 0 0 18px;
+  margin: 4px 0 0 19px;
   padding: 0;
 }
 
@@ -133,18 +125,73 @@
   margin-bottom: 4px;
 }
 
+.person-publications {
+  margin-top: 3px;
+  color: #2b3647;
+  line-height: 1.7;
+}
+
+.publication-entry {
+  white-space: normal;
+}
+
+.publication-entry strong {
+  color: var(--primary-strong, #173d61);
+  font-weight: 700;
+}
+
+.publication-separator {
+  color: #8a94a3;
+}
+
+.person-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px dashed #e1e7ed;
+}
+
+.person-email {
+  color: #4b586a;
+}
+
+.person-links a {
+  font-weight: 650;
+}
+
 @media (max-width: 760px) {
-  .person-card {
-    flex-direction: column;
-    gap: 16px;
+  .people-intro {
+    margin-bottom: 28px;
   }
 
-  .person-photo-wrap {
-    flex-basis: auto;
+  .people-group {
+    margin-bottom: 36px;
+  }
+
+  .person-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 24px 0;
+  }
+
+  .person-photo-wrap,
+  .person-photo {
+    width: 152px;
   }
 
   .person-photo {
-    width: 150px;
-    height: 194px;
+    height: 192px;
   }
+}
+
+
+/* V6 typography scale */
+.person-section,
+.person-list-plain,
+.person-publications,
+.person-links,
+.person-email {
+  font-size: 1.02rem;
 }

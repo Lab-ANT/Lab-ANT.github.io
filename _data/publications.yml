@@ -1,0 +1,1233 @@
+# Display order: year descending -> venue priority -> same venue together -> date descending within venue.
+# venue_priorities are ANT Lab website display preferences, not universal academic rankings.
+# venue_short uses established/common venue abbreviations where available.
+
+venue_priorities:
+  IEEE S&P: 1
+  USENIX Security: 2
+  CCS: 3
+  NDSS: 4
+  NeurIPS: 10
+  ICML: 11
+  ICLR: 12
+  TPAMI: 13
+  CVPR: 14
+  ICCV: 15
+  ECCV: 16
+  KDD: 17
+  WWW: 18
+  INFOCOM: 19
+  ToN: 20
+  TNNLS: 30
+  TKDE: 31
+  TIFS: 32
+  TPDS: 33
+  TMC: 34
+  TMM: 35
+  TIP: 36
+  TCSVT: 37
+  TSC: 38
+  TNSM: 39
+  IoT-J: 40
+  TBD: 41
+  AAAI: 42
+  IJCAI: 43
+  ACM MM: 44
+  ICDCS: 45
+  ICDE: 46
+  PACMMOD: 47
+  DMKD: 48
+  JPDC: 49
+  AsiaCCS: 60
+  IWQoS: 61
+  ICPP: 62
+  ICASSP: 63
+  ICME: 64
+  SRDS: 65
+  ISSRE: 66
+  GLOBECOM: 67
+  FGCS: 68
+  KBS: 69
+  ESWA: 70
+  IPM: 71
+  Comput. J.: 72
+  Computer Networks: 73
+  CMC: 80
+  arXiv: 95
+  Other / Unspecified: 99
+  Computers & Security: 74
+  IEEE Internet Computing: 75
+  Sensors: 85
+  CENet: 88
+  计算机科学与探索: 89
+publications:
+- id: 2025-prevalence-overshadows-concerns-understanding-chinese-users-priv
+  year: 2025
+  authors: Liu Z, Hu L, Zhou T, et al
+  title: Prevalence Overshadows Concerns? Understanding Chinese Users' Privacy Awareness and Expectations Towards LLM-Based Healthcare Consultation
+  venue_short: IEEE S&P
+  publication_info: '2025 IEEE Symposium on Security and Privacy (SP). IEEE, 2025: 2716-2734.'
+  pdf: Papers/2025/Prevalence_Overshadows_Concerns_Understanding_Chinese_Users_Privacy_Awareness_and_Expectations_Towards_LLM-Based_Healthcare_Consultation.pdf
+  category: Network Security & Privacy
+  venue_group: IEEE S&P
+- id: 2025-wage-weight-sharing-attribute-missing-graph-autoencoder
+  year: 2025
+  authors: Tu W, Zhou S, Liu X, et al
+  title: 'Wage: Weight-sharing attribute-missing graph autoencoder'
+  venue_short: TPAMI
+  publication_info: IEEE Transactions on Pattern Analysis and Machine Intelligence, 2025.
+  pdf: Papers/2025/WAGE_Weight-Sharing_Attribute-Missing_Graph_Autoencoder.pdf
+  category: Data Mining & Machine Learning
+  venue_group: TPAMI
+- id: 2025-humansam-classifying-human-centric-forgery-videos-in-human-spati
+  year: 2025
+  authors: Liu C, Ye Y, Zhang F, et al
+  title: 'HumanSAM: Classifying Human-centric Forgery Videos in Human Spatial, Appearance, and Motion Anomaly'
+  venue_short: ICCV
+  publication_info: 'Proceedings of the IEEE/CVF International Conference on Computer Vision. 2025: 14028-14038.'
+  pdf: Papers/2025/Liu_HumanSAM_Classifying_Human-centric_Forgery_Videos_in_Human_Spatial_Appearance_and_ICCV_2025_paper.pdf
+  category: Computer Vision & Multimedia
+  venue_group: ICCV
+- id: 2025-pruning-as-scanning-towards-internet-wide-ipv6-network-periphery
+  year: 2025
+  authors: Yang T, Hu L, Hou B, et al
+  title: 'Pruning as Scanning: Towards Internet-Wide IPv6 Network Periphery Discovery'
+  venue_short: INFOCOM
+  publication_info: 'IEEE INFOCOM 2025-IEEE Conference on Computer Communications. IEEE, 2025: 1-10.'
+  pdf: Papers/2025/Pruning_as_Scanning_Towards_Internet-Wide_IPv6_Network_Periphery_Discovery.pdf
+  category: Network Telemetry & Systems
+  venue_group: INFOCOM
+- id: 2025-6seeks-a-global-ipv6-network-periphery-scanning-system
+  year: 2025
+  authors: Yang T, Hou B, Yang Y, et al
+  title: '6Seeks: A Global IPv6 Network Periphery Scanning System'
+  venue_short: ToN
+  publication_info: IEEE Transactions on Networking, 2025.
+  pdf: Papers/2025/6Seeks_A_Global_IPv6_Network_Periphery_Scanning_System.pdf
+  category: Network Telemetry & Systems
+  venue_group: ToN
+- id: 2025-revisiting-initializing-then-refining-an-incomplete-and-missing
+  year: 2025
+  authors: Wenxuan Tu, Bin Xiao, Xinwang Liu, Sihang Zhou, Zhiping Cai, Jieren Cheng
+  title: 'Revisiting Initializing Then Refining: An Incomplete and Missing Graph Imputation Network'
+  venue_short: TNNLS
+  publication_info: 'IEEE Trans. Neural Networks Learn. Syst. 36(2): 3244-3257 (2025)'
+  pdf: Papers/2025/Revisiting Initializing Then Refining An.pdf
+  category: Data Mining & Machine Learning
+  venue_group: TNNLS
+- id: 2025-non-local-guided-neural-fields-for-4d-ct-reconstruction
+  year: 2025
+  authors: Zhou Q, Ye Y, Liu Z, et al
+  title: Non-local Guided Neural Fields for 4D CT Reconstruction
+  venue_short: TCSVT
+  publication_info: IEEE Transactions on Circuits and Systems for Video Technology, 2025.
+  pdf: Papers/2025/Non-local Guided Neural Fields for 4D CT.pdf
+  category: Computer Vision & Multimedia
+  venue_group: TCSVT
+- id: 2025-ppidm-privacy-preserving-inference-for-diffusion-model-in-the-cl
+  year: 2025
+  authors: Wang Z, Liu Z, Luo Y, et al
+  title: 'PPIDM: Privacy-Preserving Inference for Diffusion Model in the Cloud'
+  venue_short: TCSVT
+  publication_info: IEEE Transactions on Circuits and Systems for Video Technology, 2025.
+  pdf: Papers/2025/PPIDM_Privacy-Preserving_Inference_for_Diffusion_Model_in_the_Cloud.pdf
+  category: Network Security & Privacy
+  venue_group: TCSVT
+- id: 2025-metatrading-an-immersion-aware-model-trading-framework-for-vehic
+  year: 2025
+  authors: Wu H, Zeng H, Xiong Z, et al
+  title: 'Metatrading: An immersion-aware model trading framework for vehicular metaverse services'
+  venue_short: TSC
+  publication_info: IEEE Transactions on Services Computing, 2025.
+  pdf: Papers/2025/MetaTrading An Immersion-Aware Model Trading.pdf
+  category: Distributed / Federated / Edge Computing
+  venue_group: TSC
+- id: 2025-citytrac-precise-camera-selection-and-movement-prediction-for-ob
+  year: 2025
+  authors: Yu J, Wu H, Zhou T, et al
+  title: 'CityTrac: Precise Camera Selection and Movement Prediction for Object Tracking in Hyper-scale Public Security Camera Network'
+  venue_short: IoT-J
+  publication_info: IEEE Internet of Things Journal, 2025.
+  pdf: Papers/2025/CityTrac_Precise_Camera_Selection_and_Movement_Prediction_for_Object_Tracking_in_Hyperscale_Public_Security_Camera_Network.pdf
+  category: Computer Vision & Multimedia
+  venue_group: IoT-J
+- id: 2025-split-learning-on-segmented-healthcare-data
+  year: 2025
+  authors: Hu L, Zhou T, Liu Z, et al
+  title: Split Learning on Segmented Healthcare Data
+  venue_short: TBD
+  publication_info: IEEE Transactions on Big Data, 2025.
+  pdf: Papers/2025/Split_Learning_on_Segmented_Healthcare_Data.pdf
+  category: Distributed / Federated / Edge Computing
+  venue_group: TBD
+- id: 2025-allvb-all-in-one-long-video-understanding-benchmark
+  year: 2025
+  authors: Tan X, Luo Y, Ye Y, et al
+  title: 'ALLVB: All-in-One Long Video Understanding Benchmark'
+  venue_short: AAAI
+  publication_info: 'Proceedings of the AAAI Conference on Artificial Intelligence. 2025, 39(7): 7211-7219.'
+  pdf: Papers/2025/ALLVB All-in-One Long Video Understanding Benchmark.pdf
+  category: Computer Vision & Multimedia
+  venue_group: AAAI
+- id: 2025-spatiotemporal-aware-neural-fields-for-dynamic-ct-reconstruction
+  year: 2025
+  authors: Zhou Q, Ye Y, Cai Z
+  title: Spatiotemporal-Aware Neural Fields for Dynamic CT Reconstruction
+  venue_short: AAAI
+  publication_info: 'Proceedings of the AAAI Conference on Artificial Intelligence. 2025, 39(10): 10834-10842.'
+  pdf: Papers/2025/Spatiotemporal-Aware Neural Fields for Dynamic CT Reconstruction.pdf
+  category: Computer Vision & Multimedia
+  venue_group: AAAI
+- id: 2025-issd-indicator-selection-for-time-series-state-detection
+  year: 2025
+  authors: Wang C, Zhou T, Chen L, et al
+  title: 'ISSD: Indicator Selection for Time Series State Detection'
+  venue_short: PACMMOD
+  publication_info: 'Proceedings of the ACM on Management of Data, 2025, 3(1): 1-25.'
+  pdf: Papers/2025/ISSD Indicator Selection for Time Series State Detection.pdf
+  category: Data Mining & Machine Learning
+  venue_group: PACMMOD
+- id: 2025-spatiotemporal-attention-based-real-time-video-watermarking
+  year: 2025
+  authors: Yan Q, Luo Y, Wang Z, et al
+  title: Spatiotemporal attention-based real-time video watermarking
+  venue_short: DMKD
+  publication_info: 'Data Mining and Knowledge Discovery, 2025, 39(5): 62.'
+  pdf: Papers/2025/Spatiotemporal attention-based real-time video.pdf
+  category: Network Security & Privacy
+  venue_group: DMKD
+- id: 2025-towards-value-sensitive-and-poisoning-proof-model-aggregation-fo
+  year: 2025
+  authors: Hui Zeng, Tongqing Zhou, Yeting Guo, Zhiping Cai, Fang Liu
+  title: Towards value-sensitive and poisoning-proof model aggregation for federated learning on heterogeneous data
+  venue_short: JPDC
+  publication_info: 'J. Parallel Distributed Comput. 196: 104994 (2025)'
+  pdf: Papers/2025/Towards value-sensitive and poisoning-proof model aggregation for.pdf
+  category: Network Security & Privacy
+  venue_group: JPDC
+- id: 2025-mining-attack-with-zero-knowledge-in-the-blockchain
+  year: 2025
+  authors: Jiaping Y, Shang G, Rui S, et al
+  title: Mining Attack with Zero Knowledge in the Blockchain
+  venue_short: AsiaCCS
+  publication_info: 'Proceedings of the 20th ACM Asia Conference on Computer and Communications Security. 2025: 890-905.'
+  pdf: Papers/2025/Mining Attack with Zero Knowledge in the Blockchain.pdf
+  category: Network Security & Privacy
+  venue_group: AsiaCCS
+- id: 2025-6cnis-an-efficient-ipv6-cellular-network-identification-system
+  year: 2025
+  authors: Hu L, Pang Y, Hou B, et al
+  title: '6CNIS: An Efficient IPv6 Cellular Network Identification System'
+  venue_short: IWQoS
+  publication_info: '2025 IEEE/ACM 33rd International Symposium on Quality of Service (IWQoS). IEEE, 2025: 1-2.'
+  pdf: Papers/2025/6CNIS_An_Efficient_IPv6_Cellular_Network_Identification_System.pdf
+  category: Network Telemetry & Systems
+  venue_group: IWQoS
+- id: 2025-blkinfom-versatile-blockchain-based-mapping-mechanism-for-secure
+  year: 2025
+  authors: Luo Y, Tan X, Qin J, et al
+  title: 'BlkInfoM: versatile blockchain-based mapping mechanism for secure information transmission'
+  venue_short: Comput. J.
+  publication_info: 'The Computer Journal, 2025, 68(12): 1967-1979.'
+  pdf: Papers/2025/BlkInfoM versatile blockchain-based mapping.pdf
+  category: Network Security & Privacy
+  venue_group: Comput. J.
+- id: 2025-deblurtomo-self-supervised-computed-tomography-reconstruction-fr
+  year: 2025
+  authors: Zhou Q, Lu G, Ye Y, et al
+  title: 'DeblurTomo: Self-Supervised Computed Tomography Reconstruction from Blurry Images'
+  venue_short: CMC
+  publication_info: Computers, Materials & Continua, 2025, 84(2).
+  pdf: Papers/2025/DeblurTomo_Self-Supervised Computed Tomography Reconstruction from Blurry Images_Qingyang Zhou.pdf
+  category: Computer Vision & Multimedia
+  venue_group: CMC
+- id: 2025-division-in-unity-towards-efficient-and-privacy-preserving-learn
+  year: 2025
+  authors: Liu P, Zhou T, Lu G, et al
+  title: 'Division in Unity: Towards Efficient and Privacy-Preserving Learning of Healthcare Data'
+  venue_short: CMC
+  publication_info: 'Computers, Materials and Continua, 2025, 85(2): 2913-2934.'
+  pdf: Papers/2025/Division in Unity Towards Efficient and Privacy-Preserving Learning of.pdf
+  category: Network Security & Privacy
+  venue_group: CMC
+- id: 2025-real-time-multi-class-edge-detection-with-pidinet
+  year: 2025
+  authors: Huang M, Ye Y, Cai Z. PIDINet-MC
+  title: Real-Time Multi-Class Edge Detection with PiDiNet
+  venue_short: CMC
+  publication_info: 'Computers, Materials and Continua, 2025, 86(2): 1-17.'
+  pdf: Papers/2025/PIDINet-MC Real-Time Multi-Class Edge Detection with PiDiNet.pdf
+  category: Computer Vision & Multimedia
+  venue_group: CMC
+- id: 2025-a-large-scale-scan-of-ipv6-ip-id
+  year: 2025
+  authors: HUANG F, YANG Y, YU B, et al
+  title: A large-scale scan of IPv6 IP-ID
+  venue_short: CES
+  publication_info: 'Computer Engineering & Science, 2025, 47(8): 1391.'
+  pdf: Papers/2025/A large-scale scan of IPv6 IP-ID.pdf
+  category: Network Telemetry & Systems
+  venue_group: CES
+- id: 2025-apra-dp-differential-privacy-based-adaptive-privacy-preserving-r
+  year: 2025
+  authors: Xia G, Chen J, Huang X, et al
+  title: 'APRA-DP: Differential Privacy based Adaptive Privacy Preserving Robust Aggregation Method for Federated Learning'
+  venue_short: ICMLCN
+  publication_info: '2025 IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN). IEEE, 2025: 1-7.'
+  pdf: Papers/2025/APRA-DP_Differential_Privacy_based_Adaptive_Privacy_Preserving_Robust_Aggregation_Method_for_Federated_Learning.pdf
+  category: Network Security & Privacy
+  venue_group: ICMLCN
+- id: 2025-grey-rhino-warning-ipv6-is-becoming-fertile-ground-for-reflectio
+  year: 2025
+  authors: Hu L, Yang T, Pang Y, et al
+  title: 'Grey Rhino Warning: IPv6 is Becoming Fertile Ground for Reflection Amplification Attacks'
+  venue_short: arXiv
+  publication_info: arXiv preprint arXiv:2506.04768, 2025.
+  pdf: Papers/2025/Grey Rhino Warning IPv6 is Becoming Fertile.pdf
+  category: Network Security & Privacy
+  venue_group: arXiv
+- id: 2025-rag-adapter-a-plug-and-play-rag-enhanced-framework-for-long-vide
+  year: 2025
+  authors: Tan X, Ye Y, Luo Y, et al
+  title: 'RAG-Adapter: A Plug-and-Play RAG-enhanced Framework for Long Video Understanding'
+  venue_short: arXiv
+  publication_info: arXiv preprint arXiv:2503.08576, 2025.
+  pdf: Papers/2025/RAG-Adapter A Plug-and-Play RAG-enhanced Framework.pdf
+  category: Computer Vision & Multimedia
+  venue_group: arXiv
+- id: 2024-efficient-ipv6-router-interface-discovery
+  year: 2024
+  authors: Tao Yang, Zhiping Cai
+  title: Efficient IPv6 Router Interface Discovery
+  venue_short: INFOCOM
+  publication_info: 'INFOCOM 2024: 1641-1650'
+  pdf: Papers/2024/Efficient_IPv6_Router_Interface_Discovery.pdf
+  category: Network Telemetry & Systems
+  venue_group: INFOCOM
+- id: 2024-hierarchically-contrastive-hard-sample-mining-for-graph-self-sup
+  year: 2024
+  authors: Wenxuan Tu, Shaohua Kevin Zhou, Xinwang Liu, Chunpeng Ge, Zhiping Cai, Yue Liu
+  title: Hierarchically Contrastive Hard Sample Mining for Graph Self-Supervised Pretraining
+  venue_short: TNNLS
+  publication_info: 'IEEE Trans. Neural Networks Learn. Syst. 35(11): 16748-16761 (2024)'
+  pdf: Papers/2024/Hierarchically_Contrastive_Hard_Sample_Mining_for_Graph_Self-Supervised_Pretraining.pdf
+  category: Data Mining & Machine Learning
+  venue_group: TNNLS
+- id: 2024-query-adaptive-late-fusion-for-hierarchical-fine-grained-video-t
+  year: 2024
+  authors: Wentao Ma, Qingchao Chen, Fang Liu, Tongqing Zhou, Zhiping Cai
+  title: Query-Adaptive Late Fusion for Hierarchical Fine-Grained Video-Text Retrieval
+  venue_short: TNNLS
+  publication_info: 'IEEE Trans. Neural Networks Learn. Syst. 35(5): 7150-7161 (2024)'
+  pdf: Papers/2024/Query-Adaptive_Late_Fusion_for_Hierarchical_Fine-Grained_Video-Text_Retrieval.pdf
+  category: Computer Vision & Multimedia
+  venue_group: TNNLS
+- id: 2024-stedge-self-training-edge-detection-with-multilayer-teaching-and
+  year: 2024
+  authors: Yunfan Ye, Renjiao Yi, Zhiping Cai, Kai Xu
+  title: 'STEdge: Self-Training Edge Detection With Multilayer Teaching and Regularization'
+  venue_short: TNNLS
+  publication_info: 'IEEE Trans. Neural Networks Learn. Syst. 35(11): 16222-16232 (2024)'
+  pdf: Papers/2024/STEdge_Self-Training_Edge_Detection_With_Multilayer_Teaching_and_Regularization.pdf
+  category: Computer Vision & Multimedia
+  venue_group: TNNLS
+- id: 2024-rare-robust-masked-graph-autoencoder
+  year: 2024
+  authors: Wenxuan Tu, Qing Liao, Sihang Zhou, Xin Peng, Chuan Ma, Zhe Liu, Xinwang Liu, Zhiping Cai, Kunlun He
+  title: 'RARE: Robust Masked Graph Autoencoder'
+  venue_short: TKDE
+  publication_info: 'IEEE Trans. Knowl. Data Eng. 36(10): 5340-5353 (2024)'
+  pdf: Papers/2024/RARE_Robust_Masked_Graph_Autoencoder.pdf
+  category: Data Mining & Machine Learning
+  venue_group: TKDE
+- id: 2024-secose-toward-searchable-and-communicable-healthcare-service-see
+  year: 2024
+  authors: Zhihuang Liu, Ling Hu, Zhiping Cai, Ximeng Liu, Yanhua Liu
+  title: 'SeCoSe: Toward Searchable and Communicable Healthcare Service Seeking in Flexible and Secure EHR Sharing'
+  venue_short: TIFS
+  publication_info: 'IEEE Trans. Inf. Forensics Secur. 19: 4999-5014 (2024)'
+  pdf: Papers/2024/SeCoSe_Toward_Searchable_and_Communicable_Healthcare_Service_Seeking_in_Flexible_and_Secure_EHR_Sharing.pdf
+  category: Network Security & Privacy
+  venue_group: TIFS
+- id: 2024-fedsh-towards-privacy-preserving-text-based-person-re-identifica
+  year: 2024
+  authors: Wentao Ma, Xinyi Wu, Shan Zhao, Tongqing Zhou, Dan Guo, Lichuan Gu, Zhiping Cai, Meng Wang
+  title: 'FedSH: Towards Privacy-Preserving Text-Based Person Re-Identification'
+  venue_short: TMM
+  publication_info: 'IEEE Trans. Multim. 26: 5065-5077 (2024)'
+  pdf: Papers/2024/FedSH_Towards_Privacy-Preserving_Text-Based_Person_Re-Identification.pdf
+  category: Network Security & Privacy
+  venue_group: TMM
+- id: 2024-fixing-the-double-agent-vulnerability-of-deep-watermarking-a-pat
+  year: 2024
+  authors: Yuanjing Luo, Tongqing Zhou, Shenglan Cui, Yunfan Ye, Fang Liu, Zhiping Cai
+  title: 'Fixing the Double Agent Vulnerability of Deep Watermarking: A Patch-Level Solution Against Artwork Plagiarism'
+  venue_short: TCSVT
+  publication_info: 'IEEE Trans. Circuits Syst. Video Technol. 34(3): 1670-1683 (2024)'
+  pdf: Papers/2024/Fixing_the_Double_Agent_Vulnerability_of_Deep_Watermarking_A_Patch-Level_Solution_Against_Artwork_Plagiarism.pdf
+  category: Network Security & Privacy
+  venue_group: TCSVT
+- id: 2024-attribute-missing-graph-clustering-network
+  year: 2024
+  authors: Wenxuan Tu, Renxiang Guan, Sihang Zhou, Chuan Ma, Xin Peng, Zhiping Cai, Zhe Liu, Jieren Cheng, Xinwang Liu
+  title: Attribute-Missing Graph Clustering Network
+  venue_short: AAAI
+  publication_info: 'AAAI 2024: 15392-15401'
+  pdf: ''
+  category: Data Mining & Machine Learning
+  venue_group: AAAI
+- id: 2024-diffusionedge-diffusion-probabilistic-model-for-crisp-edge-detec
+  year: 2024
+  authors: Yunfan Ye, Kai Xu, Yuhang Huang, Renjiao Yi, Zhiping Cai
+  title: 'DiffusionEdge: Diffusion Probabilistic Model for Crisp Edge Detection'
+  venue_short: AAAI
+  publication_info: 'AAAI 2024: 6675-6683'
+  pdf: Papers/2024/DiffusionEdge Diffusion Probabilistic Model for Crisp Edge Detection.pdf
+  category: Computer Vision & Multimedia
+  venue_group: AAAI
+- id: 2024-text-based-occluded-person-re-identification-via-multi-granulari
+  year: 2024
+  authors: Xinyi Wu, Wentao Ma, Dan Guo, Tongqing Zhou, Shan Zhao, Zhiping Cai
+  title: Text-Based Occluded Person Re-identification via Multi-Granularity Contrastive Consistency Learning
+  venue_short: AAAI
+  publication_info: 'AAAI 2024: 6162-6170'
+  pdf: ''
+  category: Computer Vision & Multimedia
+  venue_group: AAAI
+- id: 2024-one-shot-but-not-degraded-federated-learning
+  year: 2024
+  authors: Hui Zeng, Minrui Xu, Tongqing Zhou, Xinyi Wu, Jiawen Kang, Zhiping Cai, Dusit Niyato
+  title: One-shot-but-not-degraded Federated Learning
+  venue_short: ACM MM
+  publication_info: 'ACM Multimedia 2024: 11070-11079'
+  pdf: ''
+  category: Distributed / Federated / Edge Computing
+  venue_group: ACM MM
+- id: 2024-exploring-hierarchical-patterns-for-alert-aggregation-in-superco
+  year: 2024
+  authors: Yuan Yuan, Tongqing Zhou, Xiuhong Tan, Yongqian Sun, Yuqi Li, Zhixing Li, Zhiping Cai, Tiejun Li
+  title: Exploring Hierarchical Patterns for Alert Aggregation in Supercomputers
+  venue_short: ISSRE
+  publication_info: 'ISSRE 2024: 25-36'
+  pdf: Papers/2024/Exploring_Hierarchical_Patterns_for_Alert_Aggregation_in_Supercomputers.pdf
+  category: Network Telemetry & Systems
+  venue_group: ISSRE
+- id: 2024-blockchain-and-trusted-reputation-assessment-based-incentive-mec
+  year: 2024
+  authors: Yanhua Liu, Zhihuang Liu, Qiu Zhang, Jinshu Su, Zhiping Cai, Xiaoyan Li
+  title: Blockchain and trusted reputation assessment-based incentive mechanism for healthcare services
+  venue_short: FGCS
+  publication_info: 'Future Gener. Comput. Syst. 154: 59-71 (2024)'
+  pdf: Papers/2024/Blockchain andtrustedreputation assessment-based incentive mechanism.pdf
+  category: Distributed / Federated / Edge Computing
+  venue_group: FGCS
+- id: 2024-generative-adversarial-minority-enlargement-a-local-linear-over
+  year: 2024
+  authors: Ke Wang, Tongqing Zhou, Menghua Luo, Xionglve Li, Zhiping Cai
+  title: Generative adversarial minority enlargement - A local linear over-sampling synthetic method
+  venue_short: ESWA
+  publication_info: 'Expert Syst. Appl. 237(Part C): 121696 (2024)'
+  pdf: Papers/2024/Generative adversarial minority enlargement—Alocallinearover-sampling.pdf
+  category: Data Mining & Machine Learning
+  venue_group: ESWA
+- id: 2024-a-sketch-framework-for-fast-accurate-and-fine-grained-analysis-o
+  year: 2024
+  authors: Changsheng Hou, Chunbo Jia, Bingnan Hou, Tongqing Zhou, Yingwen Chen, Zhiping Cai
+  title: A Sketch Framework for Fast, Accurate and Fine-Grained Analysis of Application Traffic
+  venue_short: Comput. J.
+  publication_info: 'Comput. J. 67(6): 2039-2053 (2024)'
+  pdf: Papers/2024/ASketch Framework for Fast, Accurate and Fine-Grained.pdf
+  category: Network Telemetry & Systems
+  venue_group: Comput. J.
+- id: 2024-dga-domain-embedding-with-deep-metric-learning
+  year: 2024
+  authors: Yifan Yang, Xionglve Li, Tao Yang, Bingnan Hou, Lingbin Zeng, Zhiping Cai, Wenyuan Kuang
+  title: DGA domain embedding with deep metric learning
+  venue_short: Comput. J.
+  publication_info: 'Comput. J. 67(11): 3094-3104 (2024)'
+  pdf: Papers/2024/DGAdomain embedding with deep metric learning.pdf
+  category: Network Security & Privacy
+  venue_group: Comput. J.
+- id: 2024-drl-tomo-a-deep-reinforcement-learning-based-approach-to-augment
+  year: 2024
+  authors: Changsheng Hou, Bingnan Hou, Xionglve Li, Tongqing Zhou, Yingwen Chen, Zhiping Cai
+  title: 'DRL-Tomo: a deep reinforcement learning-based approach to augmented data generation for network tomography'
+  venue_short: Comput. J.
+  publication_info: 'Comput. J. 67(10): 2995-3008 (2024)'
+  pdf: Papers/2024/DRL-Tomo a deep reinforcement learning-based.pdf
+  category: Network Telemetry & Systems
+  venue_group: Comput. J.
+- id: 2024-theoretical-computer-science-41st-national-conference-nctcs-2023
+  year: 2024
+  authors: Zhiping Cai, Mingyu Xiao, Jialin Zhang
+  title: Theoretical Computer Science - 41st National Conference, NCTCS 2023, Guangzhou, China, July 21-23, 2023, Revised Selected Papers
+  venue_short: NCTCS
+  publication_info: Communications in Computer and Information Science 1944, Springer 2024, ISBN 978-981-99-7742-0 [contents]
+  pdf: ''
+  category: Other
+  venue_group: NCTCS
+- id: 2024-multidocument-aspect-classification-for-aspect-based-abstractive
+  year: 2024
+  authors: Ye Wang, Yingmin Zhou, Mengzhu Wang, Zhenghan Chen, Zhiping Cai, Junyang Chen, Victor C. M. Leung
+  title: Multidocument Aspect Classification for Aspect-Based Abstractive Summarization
+  venue_short: TCSS
+  publication_info: 'IEEE Trans. Comput. Soc. Syst. 11(1): 1483-1492 (2024)'
+  pdf: Papers/2024/Multidocument_Aspect_Classification_for_Aspect-Based_Abstractive_Summarization.pdf
+  category: Natural Language Processing
+  venue_group: TCSS
+- id: 2024-metatrading-an-immersion-aware-model-trading-framework-for-vehic
+  year: 2024
+  authors: Hongjia Wu, Hui Zeng, Zehui Xiong, Jiawen Kang, Zhiping Cai, Tse-Tin Chan, Dusit Niyato, Zhu Han
+  title: 'MetaTrading: An Immersion-Aware Model Trading Framework for Vehicular Metaverse Services'
+  venue_short: arXiv
+  publication_info: CoRR abs/2410.19665 (2024)
+  pdf: Papers/2024/MetaTrading An Immersion-Aware Model Trading.pdf
+  category: Distributed / Federated / Edge Computing
+  venue_group: arXiv
+- id: 2023-raymvsnet-learning-ray-based-1d-implicit-fields-for-accurate-mul
+  year: 2023
+  authors: Yifei Shi, Junhua Xi, Dewen Hu, Zhiping Cai, Kai Xu
+  title: 'RayMVSNet++: Learning Ray-Based 1D Implicit Fields for Accurate Multi-View Stereo'
+  venue_short: TPAMI
+  publication_info: 'IEEE Trans. Pattern Anal. Mach. Intell. 45(11): 13666-13682 (2023)'
+  pdf: Papers/2023/RayMVSNet_Learning_Ray-Based_1D_Implicit_Fields_for_Accurate_Multi-View_Stereo.pdf
+  category: Computer Vision & Multimedia
+  venue_group: TPAMI
+- id: 2023-nef-neural-edge-fields-for-3d-parametric-curve-reconstruction-fr
+  year: 2023
+  authors: Yunfan Ye, Renjiao Yi, Zhirui Gao, Chenyang Zhu, Zhiping Cai, Kai Xu
+  title: 'NEF: Neural Edge Fields for 3D Parametric Curve Reconstruction from Multi-View Images'
+  venue_short: CVPR
+  publication_info: 'CVPR 2023: 8486-8495'
+  pdf: Papers/2023/NEF Neural Edge Fields for 3D Parametric Curve Reconstruction.pdf
+  category: Computer Vision & Multimedia
+  venue_group: CVPR
+- id: 2023-irwart-levering-watermarking-performance-for-protecting-high-qua
+  year: 2023
+  authors: Yuanjing Luo, Tongqing Zhou, Fang Liu, Zhiping Cai
+  title: 'IRWArt: Levering Watermarking Performance for Protecting High-quality Artwork Images'
+  venue_short: WWW
+  publication_info: 'WWW 2023: 2340-2348'
+  pdf: ''
+  category: Network Security & Privacy
+  venue_group: WWW
+- id: 2023-search-in-the-expanse-towards-active-and-global-ipv6-hitlists
+  year: 2023
+  authors: Bingnan Hou, Zhiping Cai, Kui Wu, Tao Yang, Tongqing Zhou
+  title: 'Search in the Expanse: Towards Active and Global IPv6 Hitlists'
+  venue_short: INFOCOM
+  publication_info: 'INFOCOM 2023: 1-10'
+  pdf: Papers/2023/Search in the Expanse Towards Active and Global IPv6 Hitlists.pdf
+  category: Network Telemetry & Systems
+  venue_group: INFOCOM
+- id: 2023-6scan-a-high-efficiency-dynamic-internet-wide-ipv6-scanner-with
+  year: 2023
+  authors: Bingnan Hou, Zhiping Cai, Kui Wu, Tao Yang, Tongqing Zhou
+  title: '6Scan: A High-Efficiency Dynamic Internet-Wide IPv6 Scanner With Regional Encoding'
+  venue_short: ToN
+  publication_info: 'IEEE/ACM Trans. Netw. 31(4): 1870-1885 (2023)'
+  pdf: Papers/2023/6Scan A High-Efficiency Dynamic Internet-Wide.pdf
+  category: Network Telemetry & Systems
+  venue_group: ToN
+- id: 2023-dynamic-modeling-cross-modal-interactions-in-two-phase-predictio
+  year: 2023
+  authors: Shan Zhao, Minghao Hu, Zhiping Cai, Fang Liu
+  title: Dynamic Modeling Cross-Modal Interactions in Two-Phase Prediction for Entity-Relation Extraction
+  venue_short: TNNLS
+  publication_info: 'IEEE Trans. Neural Networks Learn. Syst. 34(3): 1122-1131 (2023)'
+  pdf: Papers/2023/Dynamic_Modeling_Cross-Modal_Interactions_in_Two-Phase_Prediction_for_Entity-Relation_Extraction.pdf
+  category: Natural Language Processing
+  venue_group: TNNLS
+- id: 2023-enhancing-chinese-character-representation-with-lattice-aligned
+  year: 2023
+  authors: Shan Zhao, Minghao Hu, Zhiping Cai, Zhanjun Zhang, Tongqing Zhou, Fang Liu
+  title: Enhancing Chinese Character Representation With Lattice-Aligned Attention
+  venue_short: TNNLS
+  publication_info: 'IEEE Trans. Neural Networks Learn. Syst. 34(7): 3727-3736 (2023)'
+  pdf: Papers/2023/Enhancing Chinese Character Representation With.pdf
+  category: Natural Language Processing
+  venue_group: TNNLS
+- id: 2023-in-pursuit-of-beauty-aesthetic-aware-and-context-adaptive-photo
+  year: 2023
+  authors: Tongqing Zhou, Zhiping Cai, Fang Liu, Jinshu Su
+  title: 'In Pursuit of Beauty: Aesthetic-Aware and Context-Adaptive Photo Selection in Crowdsensing'
+  venue_short: TKDE
+  publication_info: 'IEEE Trans. Knowl. Data Eng. 35(9): 9364-9377 (2023)'
+  pdf: Papers/2023/In_Pursuit_of_Beauty_Aesthetic-Aware_and_Context-Adaptive_Photo_Selection_in_Crowdsensing.pdf
+  category: Computer Vision & Multimedia
+  venue_group: TKDE
+- id: 2023-inspecting-end-to-end-encrypted-communication-differentially-for
+  year: 2023
+  authors: Tengfei Zheng, Tongqing Zhou, Kai Lu, Zhiping Cai
+  title: Inspecting End-to-End Encrypted Communication Differentially for the Efficient Identification of Harmful Media
+  venue_short: TIFS
+  publication_info: 'IEEE Trans. Inf. Forensics Secur. 18: 5772-5787 (2023)'
+  pdf: Papers/2023/Inspecting End-to-End Encrypted Communication.pdf
+  category: Network Security & Privacy
+  venue_group: TIFS
+- id: 2023-video-anomaly-detection-via-visual-cloze-tests
+  year: 2023
+  authors: Guang Yu, Siqi Wang, Zhiping Cai, Xinwang Liu, En Zhu, Jianping Yin
+  title: Video Anomaly Detection via Visual Cloze Tests
+  venue_short: TIFS
+  publication_info: 'IEEE Trans. Inf. Forensics Secur. 18: 4955-4969 (2023)'
+  pdf: Papers/2023/Video Anomaly Detection via Visual Cloze Tests.pdf
+  category: Computer Vision & Multimedia
+  venue_group: TIFS
+- id: 2023-privacy-vs-efficiency-achieving-both-through-adaptive-hierarchic
+  year: 2023
+  authors: Yeting Guo, Fang Liu, Tongqing Zhou, Zhiping Cai, Nong Xiao
+  title: 'Privacy vs. Efficiency: Achieving Both Through Adaptive Hierarchical Federated Learning'
+  venue_short: TPDS
+  publication_info: 'IEEE Trans. Parallel Distributed Syst. 34(4): 1331-1342 (2023)'
+  pdf: Papers/2023/Privacy_vs._Efficiency_Achieving_Both_Through_Adaptive_Hierarchical_Federated_Learning.pdf
+  category: Distributed / Federated / Edge Computing
+  venue_group: TPDS
+- id: 2023-delving-into-crispness-guided-label-refinement-for-crisp-edge-de
+  year: 2023
+  authors: Yunfan Ye, Renjiao Yi, Zhirui Gao, Zhiping Cai, Kai Xu
+  title: 'Delving Into Crispness: Guided Label Refinement for Crisp Edge Detection'
+  venue_short: TIP
+  publication_info: 'IEEE Trans. Image Process. 32: 4199-4211 (2023)'
+  pdf: Papers/2023/Delving into Crispness Guided Label Refinement.pdf
+  category: Computer Vision & Multimedia
+  venue_group: TIP
+- id: 2023-using-multimodal-contrastive-knowledge-distillation-for-video-te
+  year: 2023
+  authors: Wentao Ma, Qingchao Chen, Tongqing Zhou, Shan Zhao, Zhiping Cai
+  title: Using Multimodal Contrastive Knowledge Distillation for Video-Text Retrieval
+  venue_short: TCSVT
+  publication_info: 'IEEE Trans. Circuits Syst. Video Technol. 33(10): 5486-5497 (2023)'
+  pdf: Papers/2023/Using Multimodal Contrastive Knowledge.pdf
+  category: Computer Vision & Multimedia
+  venue_group: TCSVT
+- id: 2023-from-eye-to-brain-a-proactive-and-distributed-crowdsensing-frame
+  year: 2023
+  authors: Hongjia Wu, Hui Zeng, Tongqing Zhou, Zhiping Cai, Zehui Xiong, Dusit Niyato, Zhu Han
+  title: 'From Eye to Brain: A Proactive and Distributed Crowdsensing Framework for Federated Learning'
+  venue_short: IoT-J
+  publication_info: 'IEEE Internet Things J. 10(9, May 1): 8202-8214 (2023)'
+  pdf: Papers/2023/From_Eye_to_Brain_A_Proactive_and_Distributed_Crowdsensing_Framework_for_Federated_Learning.pdf
+  category: Distributed / Federated / Edge Computing
+  venue_group: IoT-J
+- id: 2023-consensus-one-step-multi-view-subspace-clustering-extended-abstr
+  year: 2023
+  authors: Pei Zhang, Xinwang Liu, Jian Xiong, Sihang Zhou, Wentao Zhao, En Zhu, Zhiping Cai
+  title: Consensus One-step Multi-view Subspace Clustering (Extended abstract)
+  venue_short: ICDE
+  publication_info: 'ICDE 2023: 3761-3762'
+  pdf: Papers/2023/Consensus_One-step_Multi-view_Subspace_Clustering_Extended_abstract.pdf
+  category: Data Mining & Machine Learning
+  venue_group: ICDE
+- id: 2023-time2state-an-unsupervised-framework-for-inferring-the-latent-st
+  year: 2023
+  authors: Chengyu Wang, Kui Wu, Tongqing Zhou, Zhiping Cai
+  title: 'Time2State: An Unsupervised Framework for Inferring the Latent States in Time Series Data'
+  venue_short: PACMMOD
+  publication_info: 'Proc. ACM Manag. Data 1(1): 17:1-17:18 (2023)'
+  pdf: Papers/2023/Time2State An Unsupervised Framework for Inferring the.pdf
+  category: Data Mining & Machine Learning
+  venue_group: PACMMOD
+- id: 2023-efficient-personalized-federated-learning-on-selective-model-tra
+  year: 2023
+  authors: Yeting Guo, Fang Liu, Tongqing Zhou, Zhiping Cai, Nong Xiao
+  title: Efficient Personalized Federated Learning on Selective Model Training
+  venue_short: ICASSP
+  publication_info: 'ICASSP 2023: 1-5'
+  pdf: Papers/2023/Efficient_Personalized_Federated_Learning_on_Selective_Model_Training.pdf
+  category: Distributed / Federated / Edge Computing
+  venue_group: ICASSP
+- id: 2023-tracking-targets-in-hyper-scale-cameras-using-movement-predicati
+  year: 2023
+  authors: Jiaping Yu, Tongqing Zhou, Zhiping Cai, Wenyuan Kuang
+  title: Tracking Targets in Hyper-Scale Cameras Using Movement Predication
+  venue_short: ICASSP
+  publication_info: 'ICASSP 2023: 1-5'
+  pdf: Papers/2023/Tracking_Targets_in_Hyper-Scale_Cameras_Using_Movement_Predication.pdf
+  category: Computer Vision & Multimedia
+  venue_group: ICASSP
+- id: 2023-adaptive-multi-feature-fusion-via-cross-entropy-normalization-fo
+  year: 2023
+  authors: Wentao Ma, Tongqing Zhou, Jiaohua Qin, Xuyu Xiang, Yun Tan, Zhiping Cai
+  title: Adaptive multi-feature fusion via cross-entropy normalization for effective image retrieval
+  venue_short: IPM
+  publication_info: 'Inf. Process. Manag. 60(1): 103119 (2023)'
+  pdf: Papers/2023/Adaptivemulti-feature fusion via cross-entropy normalization for.pdf
+  category: Computer Vision & Multimedia
+  venue_group: IPM
+- id: 2023-leveraging-heuristic-client-selection-for-enhanced-secure-federa
+  year: 2023
+  authors: Panyu Liu, Tongqing Zhou, Zhiping Cai, Fang Liu, Yeting Guo
+  title: Leveraging heuristic client selection for enhanced secure federated submodel learning
+  venue_short: IPM
+  publication_info: 'Inf. Process. Manag. 60(3): 103211 (2023)'
+  pdf: Papers/2023/Leveraging heuristic client selection for enhanced secure federated.pdf
+  category: Distributed / Federated / Edge Computing
+  venue_group: IPM
+- id: 2023-seeing-is-believing-towards-interactive-visual-exploration-of-da
+  year: 2023
+  authors: Yeting Guo, Fang Liu, Tongqing Zhou, Zhiping Cai, Nong Xiao
+  title: 'Seeing is believing: Towards interactive visual exploration of data privacy in federated learning'
+  venue_short: IPM
+  publication_info: 'Inf. Process. Manag. 60(2): 103162 (2023)'
+  pdf: Papers/2023/Seeing is believing Towards interactive visual exploration of data.pdf
+  category: Network Security & Privacy
+  venue_group: IPM
+- id: 2023-turning-backdoors-for-efficient-privacy-protection-against-image
+  year: 2023
+  authors: Qiang Liu, Tongqing Zhou, Zhiping Cai, Yuan Yuan, Ming Xu, Jiaohua Qin, Wentao Ma
+  title: Turning backdoors for efficient privacy protection against image retrieval violations
+  venue_short: IPM
+  publication_info: 'Inf. Process. Manag. 60(5): 103471 (2023)'
+  pdf: Papers/2023/Turningbackdoorsforefficient privacy protection against image.pdf
+  category: Network Security & Privacy
+  venue_group: IPM
+- id: 2023-6search-a-reinforcement-learning-based-traceroute-approach-for-e
+  year: 2023
+  authors: Ning Liu, Chunbo Jia, Bingnan Hou, Changsheng Hou, Yingwen Chen, Zhiping Cai
+  title: '6Search: A reinforcement learning-based traceroute approach for efficient IPv6 topology discovery'
+  venue_short: Comput. Networks
+  publication_info: 'Comput. Networks 235: 109987 (2023)'
+  pdf: Papers/2023/6Search Areinforcementlearning-basedtraceroute approachforefficient.pdf
+  category: Network Telemetry & Systems
+  venue_group: Computer Networks
+- id: 2023-a-comparison-study-of-the-compatibility-approaches-for-sgx-encla
+  year: 2023
+  authors: Jinhua Cui, Yiyun Yin, Zhiping Cai, Jiliang Zhang
+  title: A Comparison Study of the Compatibility Approaches for SGX Enclaves
+  venue_short: ATS
+  publication_info: 'ATS 2023: 1-6'
+  pdf: Papers/2023/A Comparison Study of the Compatibility Approaches for SGX Enclaves.pdf
+  category: Network Security & Privacy
+  venue_group: ATS
+- id: 2023-region-smote-a-new-over-sampling-method-in-imbalanced-data-sets
+  year: 2023
+  authors: Wencheng Sun, Zhiping Cai, Xiaoyong Chen
+  title: 'Region-SMOTE: A New Over-Sampling Method in Imbalanced Data Sets Learning'
+  venue_short: NCTCS
+  publication_info: 'NCTCS 2023: 151-160'
+  pdf: ''
+  category: Data Mining & Machine Learning
+  venue_group: NCTCS
+- id: 2023-a-game-based-incentive-driven-offloading-framework-for-dispersed
+  year: 2023
+  authors: Hongjia Wu, Jiangtian Nie, Zehui Xiong, Zhiping Cai, Tongqing Zhou, Chau Yuen, Dusit Niyato
+  title: A Game-Based Incentive-Driven Offloading Framework for Dispersed Computing
+  venue_short: TCom
+  publication_info: 'IEEE Trans. Commun. 71(7): 4034-4049 (2023)'
+  pdf: Papers/2023/A Game-Based Incentive-Driven Offloading.pdf
+  category: Distributed / Federated / Edge Computing
+  venue_group: TCom
+- id: 2023-delving-into-crispness-guided-label-refinement-for-crisp-edge-de
+  year: 2023
+  authors: Yunfan Ye, Renjiao Yi, Zhirui Gao, Zhiping Cai, Kai Xu
+  title: 'Delving into Crispness: Guided Label Refinement for Crisp Edge Detection'
+  venue_short: arXiv
+  publication_info: CoRR abs/2306.15172 (2023)
+  pdf: Papers/2023/Delving into Crispness Guided Label Refinement.pdf
+  category: Computer Vision & Multimedia
+  venue_group: arXiv
+- id: 2023-nef-neural-edge-fields-for-3d-parametric-curve-reconstruction-fr
+  year: 2023
+  authors: Yunfan Ye, Renjiao Yi, Zhirui Gao, Chenyang Zhu, Zhiping Cai, Kai Xu
+  title: 'NEF: Neural Edge Fields for 3D Parametric Curve Reconstruction from Multi-view Images'
+  venue_short: arXiv
+  publication_info: CoRR abs/2303.07653 (2023)
+  pdf: Papers/2023/NEF Neural Edge Fields for 3D Parametric Curve Reconstruction.pdf
+  category: Computer Vision & Multimedia
+  venue_group: arXiv
+- id: 2023-rare-robust-masked-graph-autoencoder
+  year: 2023
+  authors: Wenxuan Tu, Qing Liao, Sihang Zhou, Xin Peng, Chuan Ma, Zhe Liu, Xinwang Liu, Zhiping Cai
+  title: 'RARE: Robust Masked Graph Autoencoder'
+  venue_short: arXiv
+  publication_info: CoRR abs/2304.01507 (2023)
+  pdf: Papers/2023/RARE Robust Masked Graph Autoencoder.pdf
+  category: Data Mining & Machine Learning
+  venue_group: arXiv
+- id: 2023-raymvsnet-learning-ray-based-1d-implicit-fields-for-accurate-mul
+  year: 2023
+  authors: Yifei Shi, Junhua Xi, Dewen Hu, Zhiping Cai, Kai Xu
+  title: 'RayMVSNet++: Learning Ray-based 1D Implicit Fields for Accurate Multi-View Stereo'
+  venue_short: arXiv
+  publication_info: CoRR abs/2307.10233 (2023)
+  pdf: Papers/2023/RayMVSNet_Learning_Ray-Based_1D_Implicit_Fields_for_Accurate_Multi-View_Stereo.pdf
+  category: Computer Vision & Multimedia
+  venue_group: arXiv
+- id: 2023-revisiting-initializing-then-refining-an-incomplete-and-missing
+  year: 2023
+  authors: Wenxuan Tu, Bin Xiao, Xinwang Liu, Sihang Zhou, Zhiping Cai, Jieren Cheng
+  title: 'Revisiting Initializing Then Refining: An Incomplete and Missing Graph Imputation Network'
+  venue_short: arXiv
+  publication_info: CoRR abs/2302.07524 (2023)
+  pdf: Papers/2023/Revisiting Initializing Then Refining.pdf
+  category: Data Mining & Machine Learning
+  venue_group: arXiv
+- id: 2022-characterizing-and-detecting-non-consensual-photo-sharing-on-soc
+  year: 2022
+  authors: Zheng, T., Zhou, T., Liu, Q., Wu, K., & Cai, Z
+  title: Characterizing and detecting non-consensual photo sharing on social networks
+  venue_short: CCS
+  publication_info: In Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security (pp. 3209-3222).（CCF A会）
+  pdf: Papers/2022/Characterizing and Detecting Non-Consensual Photo Sharing on Social Networks (1).pdf
+  category: Network Security & Privacy
+  venue_group: CCS
+- id: 2022-deep-anomaly-discovery-from-unlabeled-videos-via-normality-advan
+  year: 2022
+  authors: Yu, G., Wang, S., Cai, Z., Liu, X., Xu, C., & Wu, C
+  title: Deep anomaly discovery from unlabeled videos via normality advantage and self-paced refinement
+  venue_short: CVPR
+  publication_info: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 13987-13998.（CCF A会)
+  pdf: Papers/2022/Deep Anomaly Discovery from Unlabeled Videos via.pdf
+  category: Computer Vision & Multimedia
+  venue_group: CVPR
+- id: 2022-6forest-an-ensemble-learning-based-approach-to-target-generation
+  year: 2022
+  authors: Tao Yang, Zhiping Cai, Tongqing Zhou
+  title: '6Forest: An Ensemble Learning-based Approach to Target Generation for Internet-wide IPv6 Scanning'
+  venue_short: INFOCOM
+  publication_info: Proc. INFOCOM 2022.（CCF A会）
+  pdf: Papers/2022/6Forest_An_Ensemble_Learning-based_Approach_to_Target_Generation_for_Internet-wide_IPv6_Scanning.pdf
+  category: Network Telemetry & Systems
+  venue_group: INFOCOM
+- id: 2022-from-eye-to-brain-a-proactive-and-distributed-crowdsensing-frame
+  year: 2022
+  authors: Wu, H., Zeng, H., Zhou, T., Cai, Z., Xiong, Z., Niyato, D., & Han, Z
+  title: 'From eye to brain: A proactive and distributed crowdsensing framework for federated learning'
+  venue_short: IoT-J
+  publication_info: IEEE Internet of Things Journal.（CCF C刊，中科院一区）
+  pdf: Papers/2022/From_Eye_to_Brain_A_Proactive_and_Distributed_Crowdsensing_Framework_for_Federated_Learning.pdf
+  category: Distributed / Federated / Edge Computing
+  venue_group: IoT-J
+- id: 2022-initializing-then-refining-a-simple-graph-attribute-imputation-n
+  year: 2022
+  authors: Tu, W., Zhou, S., Liu, X., Liu, Y., Cai, Z., Zhu, E., Zhang, C., & Cheng, J
+  title: 'Initializing then refining: A simple graph attribute imputation network'
+  venue_short: IJCAI
+  publication_info: In Proc. IJCAI (pp. 3494-3500).
+  pdf: Papers/2022/Revisiting_Initializing_Then_Refining_An_Incomplete_and_Missing_Graph_Imputation_Network.pdf
+  category: Data Mining & Machine Learning
+  venue_group: IJCAI
+- id: 2022-opportunistic-backdoor-attacks-exploring-human-imperceptible-vul
+  year: 2022
+  authors: Liu, Q., Zhou, T., Cai, Z., & Tang, Y
+  title: 'Opportunistic backdoor attacks: exploring human-imperceptible vulnerabilities on speech recognition systems'
+  venue_short: ACM MM
+  publication_info: In Proceedings of the 30th ACM International Conference on Multimedia (pp. 2390-2398).（CCF A会）
+  pdf: Papers/2022/Opportunistic Backdoor Attacks Exploring Human-imperceptible.pdf
+  category: Network Security & Privacy
+  venue_group: ACM MM
+- id: 2022-detecting-anomalous-events-from-unlabeled-videos-via-temporal-ma
+  year: 2022
+  authors: Hu, J., Yu, G., Wang, S., Zhu, E., Cai, Z., & Zhu, X.
+  title: Detecting Anomalous Events from Unlabeled Videos via Temporal Masked Auto-Encoding
+  venue_short: ICME
+  publication_info: In 2022 IEEE International Conference on Multimedia and Expo (ICME) (pp. 1-6). IEEE.（CCF B会）
+  pdf: Papers/2022/Detecting_Anomalous_Events_from_Unlabeled_Videos_via_Temporal_Masked_Auto-Encoding.pdf
+  category: Computer Vision & Multimedia
+  venue_group: ICME
+- id: 2022-never-too-late-tracing-and-mitigating-backdoor-attacks-in-federa
+  year: 2022
+  authors: Zeng, H., Zhou, T., Wu, X., & Cai, Z
+  title: 'Never too late: Tracing and mitigating backdoor attacks in federated learning'
+  venue_short: SRDS
+  publication_info: In 2022 41st International Symposium on Reliable Distributed Systems (SRDS) (pp. 69-81). IEEE.（CCF B会）
+  pdf: Papers/2022/Never_Too_Late_Tracing_and_Mitigating_Backdoor_Attacks_in_Federated_Learning.pdf
+  category: Network Security & Privacy
+  venue_group: SRDS
+- id: 2022-discovering-truth-in-mobile-crowdsensing-with-differential-locat
+  year: 2022
+  authors: Zhou, T., Cai, Z., & Su, J
+  title: Discovering Truth in Mobile Crowdsensing with Differential Location Privacy
+  venue_short: GLOBECOM
+  publication_info: In GLOBECOM 2022-2022 IEEE Global Communications Conference (pp. 903-908). IEEE.（CCF C会）
+  pdf: Papers/2022/Discovering_Truth_in_Mobile_Crowdsensing_with_Differential_Location_Privacy.pdf
+  category: Network Security & Privacy
+  venue_group: GLOBECOM
+- id: 2022-joint-attention-feature-fusion-network-and-dual-adaptive-nms-for
+  year: 2022
+  authors: Ma, W., Zhou, T., Qin, J., Zhou, Q., & Cai, Z
+  title: Joint-attention feature fusion network and dual-adaptive NMS for object detection
+  venue_short: KBS
+  publication_info: Knowledge-Based Systems, 241, 108213.（CCF C刊）
+  pdf: Papers/2022/Joint-attention feature fusion networkanddual-adaptiveNMS.pdf
+  category: Computer Vision & Multimedia
+  venue_group: KBS
+- id: 2022-a-privacy-preserving-content-based-image-retrieval-method-based
+  year: 2022
+  authors: Ma, W., Zhou, T., Qin, J., Xiang, X., Tan, Y., & Cai, Z
+  title: A privacy-preserving content-based image retrieval method based on deep learning in cloud computing
+  venue_short: ESWA
+  publication_info: Expert Systems with Applications, 203, 117508.（CCF C刊）
+  pdf: Papers/2022/Aprivacy-preserving content-based imageretrieval methodbasedondeep.pdf
+  category: Network Security & Privacy
+  venue_group: ESWA
+- id: 2022-6graph-a-graph-theoretic-approach-to-address-pattern-mining-for
+  year: 2022
+  authors: Tao Yang, Bingnan Hou, Zhiping Cai, Kui Wu, Tongqing Zhou, Chengyu Wang
+  title: '6Graph: A graph-theoretic approach to address pattern mining for Internet-wide IPv6 scanning'
+  venue_short: Comput. Networks
+  publication_info: 'Computer Networks, 2021, DOI: 10.1016/j.comnet.2021.108666（CCF B刊）'
+  pdf: Papers/2022/6Graph Agraph-theoreticapproachtoaddresspatternminingfor.pdf
+  category: Network Telemetry & Systems
+  venue_group: Computer Networks
+- id: 2022-towards-differential-access-control-and-privacy-preserving-for-s
+  year: 2022
+  authors: T. Zheng, Y. Luo, T. Zhou, Z. Cai
+  title: Towards differential access control and privacy-preserving for secure media data sharing in the cloud
+  venue_short: Comput. Secur.
+  publication_info: 'Computers & Security, 2022, 113, DOI: 10.1016/j.cose.2021.102553（CCF B刊'
+  pdf: Papers/2022/Towards-differential-access-control-and-privacy-preserving-_2022_Computers--.pdf
+  category: Network Security & Privacy
+  venue_group: Computers & Security
+- id: 2022-leveraging-active-decremental-ttl-measuring-for-flexible-and-eff
+  year: 2022
+  authors: T. Yang, C. Wang, T. Zhou, Z Cai, K. Wu, B. Hou
+  title: Leveraging Active Decremental TTL Measuring for Flexible and Efficient NAT Identification
+  venue_short: CMC
+  publication_info: 'COMPUTERS MATERIALS & CONTINUA, 2022, 70(3): 5179-5198.'
+  pdf: Papers/2022/TTL Measuring for Flexible and Efficient NAT Identification_Tao Yang.pdf
+  category: Network Telemetry & Systems
+  venue_group: CMC
+- id: pub-2022-06
+  year: 2022
+  authors: 赵山, 罗睿, & 蔡志平
+  title: 中文命名实体识别综述
+  venue_short: JFCST
+  publication_info: 计算机科学与探索, 16(2), 296.
+  pdf: Papers/2022/中文命名实体识别综述_赵山.pdf
+  category: Natural Language Processing
+  venue_group: 计算机科学与探索
+- id: 2022-a-survey-on-ipv6-security-threats-and-defense-mechanisms
+  year: 2022
+  authors: Liu, N., Xia, J., Cai, Z., Yang, T., Hou, B., & Wang, Z
+  title: A survey on ipv6 security threats and defense mechanisms
+  venue_short: ''
+  publication_info: In S. Wang, Q. Liu, & Y. Yin (Eds.), Artificial Intelligence.（CCF A刊）
+  pdf: ''
+  category: Network Security & Privacy
+  venue_group: Artificial Intelligence
+- id: 2022-guiding-abstractive-dialogue-summarization-with-content-planning
+  year: 2022
+  authors: Wang, Y., Wan, X., & Cai, Z
+  title: Guiding Abstractive Dialogue Summarization with Content Planning
+  venue_short: EMNLP
+  publication_info: 'In Findings of the Association for Computational Linguistics: EMNLP 2022 (pp. 3408-3413).（CCF B会）'
+  pdf: Papers/2022/Guiding Abstractive Dialogue Summarization with Content Planning (1).pdf
+  category: Natural Language Processing
+  venue_group: EMNLP
+- id: 2022-tsaens-ensemble-learning-for-kpi-anomaly-detection
+  year: 2022
+  authors: Wang, C., Yang, T., Cui, J., Li, Y., Zhou, T., & Cai, Z
+  title: 'TSAEns: Ensemble Learning for KPI Anomaly Detection'
+  venue_short: ICA3PP
+  publication_info: 'In S. Wang, Q. Liu, & Y. Yin (Eds.), Algorithms and Architectures for Parallel Processing: 21st International Conference, ICA3PP 2021, Virtual Event, December 3–5, 2021, Proceedings, Part I (pp. 162-177). Springer International Publishing.（CCF C会）'
+  pdf: ''
+  category: Network Telemetry & Systems
+  venue_group: ICA3PP
+- id: 2022-a-survey-on-ipv6-security-threats-and-defense-mechanisms
+  year: 2022
+  authors: Liu, N., Xia, J., Cai, Z., Yang, T., Hou, B., & Wang, Z
+  title: A survey on IPv6 security threats and defense mechanisms
+  venue_short: ICAIS
+  publication_info: 'In Y. Zhou, F. Liu, J. Li, Y. Zhang, & G. Wang (Eds.), Artificial Intelligence and Security: 8th International Conference, ICAIS 2022, Qinghai, China, July 15–20, 2022, Proceedings, Part I (pp. 583-598). Springer International Publishing.'
+  pdf: ''
+  category: Network Security & Privacy
+  venue_group: ICAIS
+- id: 2022-evichain-a-scalable-blockchain-for-accountable-intelligent-surve
+  year: 2022
+  authors: Yu, J., Chen, H., Wu, K., Zhou, T., Cai, Z., & Liu, F
+  title: 'EviChain: A scalable blockchain for accountable intelligent surveillance systems'
+  venue_short: IJIS
+  publication_info: International Journal of Intelligent Systems, 37(2), 1454-1478.（CCF C刊）
+  pdf: Papers/2022/EBSCO-FullText-2025_04_11.pdf
+  category: Network Security & Privacy
+  venue_group: IJIS
+- id: 2022-para-performability-aware-resource-allocation-on-the-edges-for-c
+  year: 2022
+  authors: Guo, Y., Liu, F., Xiao, N., Li, Z., Cai, Z., Tang, G., & Liu, N
+  title: 'PARA: Performability‐aware resource allocation on the edges for cloud‐native services'
+  venue_short: IJIS
+  publication_info: International Journal of Intelligent Systems, 37(11), 8523-8547.（CCF C刊）
+  pdf: Papers/2022/Int J of Intelligent Sys - 2022 - Guo - PARA Performability‐aware resource allocation on the edges for cloud‐native (1).pdf
+  category: Distributed / Federated / Edge Computing
+  venue_group: IJIS
+- id: 2022-deep-transfer-learning-based-risk-prediction-model-for-infectiou
+  year: 2022
+  authors: Jiang, Y., Cai, Z., Cai, K., Xia, J., & Yan, L
+  title: Deep transfer learning based risk prediction model for infectious disease
+  venue_short: NCTCS
+  publication_info: 'In X. Gao, X. Liu, H. Shi, & G. Zhang (Eds.), Theoretical Computer Science: 40th National Conference, NCTCS 2022, Changchun, China, July 29–31, 2022, Revised Selected Papers (pp. 183-193). Springer Nature Singapore.'
+  pdf: ''
+  category: Data Mining & Machine Learning
+  venue_group: NCTCS
+- id: 2021-consensus-one-step-multi-view-subspace-clustering
+  year: 2021
+  authors: Pei Zhang, Xinwang Liu, Jian Xiong, Sihang Zhou, Wentao Zhao, En Zhu, Zhiping Cai
+  title: Consensus One-step Multi-view Subspace Clustering
+  venue_short: TKDE
+  publication_info: Publication date, IEEE Transactions on Knowledge and Data Engineering, 2020 12 18 （CCF A）
+  pdf: Papers/2021/Consensus_One-step_Multi-view_Subspace_Clustering_TKDE.pdf
+  category: Data Mining & Machine Learning
+  venue_group: TKDE
+- id: 2021-repnet-cutting-latency-with-flow-replication-in-data-center-netw
+  year: 2021
+  authors: Shuhao Liu, Hong Xu, Wei Bai, Libin Liu, Kai Chen, and Zhiping Cai
+  title: 'RepNet: Cutting Latency with Flow Replication in Data Center Networks'
+  venue_short: TSC
+  publication_info: 'IEEE Transactions on Services Computing, 2021, 14(1), pp: 248-261. doi: 10.1109/TSC.2018.2793250'
+  pdf: Papers/2021/RepNet_Cutting_Latency_with_Flow_Replication_in_Data_Center_Networks.pdf
+  category: Network Telemetry & Systems
+  venue_group: TSC
+- id: 2021-detection-and-characterization-of-network-anomalies-in-large-sca
+  year: 2021
+  authors: Bingnan Hou, Changsheng Hou, Tongqing Zhou, Zhiping Cai, Fang Liu
+  title: Detection and Characterization of Network Anomalies in Large-Scale RTT Time Series
+  venue_short: TNSM
+  publication_info: 'IEEE Trans. Netw. Serv. Manag. 18(1): 793-806 (2021)'
+  pdf: Papers/2021/Detection_and_Characterization_of_Network_Anomalies_in_Large-Scale_RTT_Time_Series.pdf
+  category: Network Telemetry & Systems
+  venue_group: TNSM
+- id: 2021-centipede-leveraging-the-distributed-camera-crowd-for-cooperativ
+  year: 2021
+  authors: Jiaping Yu, Haiwen Chen, Kui Wu, Tongqing Zhou, Zhiping Cai, Fang Liu
+  title: 'Centipede: Leveraging the Distributed Camera Crowd for Cooperative Video Data Storage'
+  venue_short: IoT-J
+  publication_info: IEEE Internet of Things Journal. DOI (identifier) 10.1109/JIOT.2021.3074823. （中科院一区）
+  pdf: Papers/2021/Centipede_Leveraging_the_Distributed_Camera_Crowd_for_Cooperative_Video_Data_Storage.pdf
+  category: Distributed / Federated / Edge Computing
+  venue_group: IoT-J
+- id: 2021-resolving-multi-task-competition-for-constrained-resources-in-di
+  year: 2021
+  authors: Hongjia Wu, Jiao Zhang, Zhiping Cai, Qiang Ni, Tongqing Zhou, Jiaping Yu, Haiwen Chen and Fang Liu
+  title: 'Resolving Multi-task Competition for Constrained Resources in Dispersed Computing: A Bilateral Matching Game'
+  venue_short: IoT-J
+  publication_info: 'IEEE Internet of Things Journal, 2021. Doi: 10.1109/JIOT.2021.3075673. （中科院一区）'
+  pdf: Papers/2021/Resolving_Multitask_Competition_for_Constrained_Resources_in_Dispersed_Computing_A_Bilateral_Matching_Game.pdf
+  category: Distributed / Federated / Edge Computing
+  venue_group: IoT-J
+- id: 2021-a-survey-on-anomaly-detection-techniques-in-large-scale-kpi-data
+  year: 2021
+  authors: Ji Qian, Guangfu Zeng, Zhiping Cai, Shuhui Chen, Ningzheng Luo, Haibing Liu
+  title: A Survey on Anomaly Detection Techniques in Large-Scale KPI Data
+  venue_short: CENet
+  publication_info: Proceedings of the 9th International Conference on Computer Engineering and Networks, 2021, 767-776.
+  pdf: ''
+  category: Network Telemetry & Systems
+  venue_group: CENet
+- id: 2021-smartstore-a-blockchain-and-clustering-based-intelligent-edge-st
+  year: 2021
+  authors: Chen H, Yu J, Zhou H, Zhou T, Liu F, Cai Z
+  title: 'SmartStore: A blockchain and clustering based intelligent edge storage system with fairness and resilience'
+  venue_short: IJIS
+  publication_info: 'Int J Intell Syst. 2021;1‐26. https: doi.org 10.1002 int.22509. （中科院一区）'
+  pdf: Papers/2021/IJIS_SmartStore.pdf
+  category: Distributed / Federated / Edge Computing
+  venue_group: IJIS
+- id: 2021-trusted-audit-with-untrusted-auditors-a-decentralized-data-integ
+  year: 2021
+  authors: H. Chen, H. Zhou, J. Yu, K.Wu, F. Liu, T. Zhou, and Z. Cai
+  title: 'Trusted Audit with Untrusted Auditors: A Decentralized Data Integrity Crowdauditing Model Based on Blockchain'
+  venue_short: IJIS
+  publication_info: International Journal of Intelligent Systems, 2021;00:1–22.
+  pdf: Papers/2021/Int J of Intelligent Sys - 2021 - Chen - Trusted audit with untrusted auditors  A decentralized data integrity_A.pdf
+  category: Network Security & Privacy
+  venue_group: IJIS
+- id: 2021-prefer-point-of-interest-recommendation-with-efficiency-and-priv
+  year: 2021
+  authors: Yeting Guo, Fang Liu, Zhiping Cai, Hui Zeng, Li Chen, Tongqing Zhou, Nong Xiao
+  title: 'PREFER: Point-of-interest REcommendation with efficiency and privacy-preservation via Federated Edge learning'
+  venue_short: IMWUT
+  publication_info: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (UbiComp), 2021. （CCF A）
+  pdf: Papers/2021/PREFER Point-of-interest REcommendation with efficiency and privacy-preservation via Federated Edge leaRning.pdf
+  category: Distributed / Federated / Edge Computing
+  venue_group: IMWUT
+- id: 2020-multi-view-spectral-clustering-with-high-order-optimal-neighborh
+  year: 2020
+  authors: W Liang, S Zhou, J Xiong, X Liu, S Wang, E Zhu, Z Cai, X Xu
+  title: Multi-View Spectral Clustering with High-Order Optimal Neighborhood Laplacian Matrix
+  venue_short: TKDE
+  publication_info: IEEE Transactions on Knowledge and Data Engineering (2020) (CCF A类顶级期刊)
+  pdf: ''
+  category: Data Mining & Machine Learning
+  venue_group: TKDE
+- id: 2020-unsupervised-online-anomaly-detection-with-parameter-adaptation
+  year: 2020
+  authors: Guang Yu, Zhiping Cai, Siqi Wang, Haiwen Chen, Fang Liu, Anfeng Liu
+  title: Unsupervised Online Anomaly Detection with Parameter Adaptation for KPI Abrupt Changes
+  venue_short: TNSM
+  publication_info: 'IEEE Transactions on Network and Service Management, 17(3): 1294-1308 (2020).'
+  pdf: ''
+  category: Network Telemetry & Systems
+  venue_group: TNSM
+- id: 2020-toward-energy-aware-caching-for-intelligent-connected-vehicles
+  year: 2020
+  authors: Hongjia Wu, Jiao Zhang, Zhiping Cai, Fang Liu, Yangyang Li, Anfeng Liu
+  title: Toward Energy-Aware Caching for Intelligent Connected Vehicles
+  venue_short: IoT-J
+  publication_info: 'IEEE Internet Things Journal. 7(9): 8157-8166 (2020)'
+  pdf: ''
+  category: Distributed / Federated / Edge Computing
+  venue_group: IoT-J
+- id: 2020-modeling-dense-cross-modal-interactions-for-joint-entity-relatio
+  year: 2020
+  authors: Shan Zhao, Minghao Hu, Zhiping Cai, Fang Liu
+  title: Modeling Dense Cross-Modal Interactions for Joint Entity-Relation Extraction
+  venue_short: IJCAI
+  publication_info: 'IJCAI 2020: 4032-4038'
+  pdf: ''
+  category: Natural Language Processing
+  venue_group: IJCAI
+- id: 2020-cloze-test-helps-effective-video-anomaly-detection-via-learning
+  year: 2020
+  authors: Guang Yu, Siqi Wang, Zhiping Cai, En Zhu, Chuanfu Xu, Jianping Yin, Marius Kloft
+  title: 'Cloze Test Helps: Effective Video Anomaly Detection via Learning to Complete Video Events'
+  venue_short: ACM MM
+  publication_info: 'ACM Multimedia 2020: 583-591'
+  pdf: ''
+  category: Computer Vision & Multimedia
+  venue_group: ACM MM
+- id: 2020-a-distributed-storage-system-for-robust-privacy-preserving-surve
+  year: 2020
+  authors: Jiaping Yu, Haiwen Chen, Kui Wu, Zhiping Cai, Jinhua Cui
+  title: A Distributed Storage System for Robust, Privacy-Preserving Surveillance Cameras
+  venue_short: ICDCS
+  publication_info: 'ICDCS 2020: 1195-1196'
+  pdf: ''
+  category: Distributed / Federated / Edge Computing
+  venue_group: ICDCS
+- id: 2020-adaptive-data-and-verified-message-disjoint-security-routing-for
+  year: 2020
+  authors: Xiao Liu, Anfeng Liu, Tian Wang, Kaoru Ota, Mianxiong Dong, Yuxin Liu, Zhiping Cai
+  title: Adaptive data and verified message disjoint security routing for gathering big data in energy harvesting networks
+  venue_short: JPDC
+  publication_info: Journal of Parallel and Distributed Computing, 2020, 135(4):140-155. (ESI高被引0.1%)
+  pdf: ''
+  category: Network Security & Privacy
+  venue_group: JPDC
+- id: 2020-feel-a-federated-edge-learning-system-for-efficient-and-privacy
+  year: 2020
+  authors: Yeting Guo, Fang Liu, Zhiping Cai, Li Chen, Nong Xiao
+  title: 'FEEL: A Federated Edge Learning System for Efficient and Privacy-Preserving Mobile Healthcare'
+  venue_short: ICPP
+  publication_info: 'ICPP 2020: 9:1-9:11'
+  pdf: ''
+  category: Distributed / Federated / Edge Computing
+  venue_group: ICPP
+- id: 2020-probinfer-probability-based-as-path-inference-from-multigraph-pe
+  year: 2020
+  authors: Xiong-lve Li, Zhiping Cai, Bingnan Hou, Ning Liu, Fang Liu, Jieren Cheng
+  title: 'ProbInfer: Probability-based AS path inference from multigraph perspective'
+  venue_short: Comput. Networks
+  publication_info: 'Computer Networks 180: 107377 (2020)'
+  pdf: ''
+  category: Network Telemetry & Systems
+  venue_group: Computer Networks
+- id: 2020-archipelago-a-medical-distributed-storage-system-for-interconnec
+  year: 2020
+  authors: Haiwen Chen, Jiaping Yu, Fang Liu, Zhiping Cai, Jing Xia
+  title: 'Archipelago: A Medical Distributed Storage System for Interconnected Health'
+  venue_short: IEEE Internet Comput.
+  publication_info: 'IEEE Internet Comput. 24(2): 28-38 (2020)'
+  pdf: ''
+  category: Distributed / Federated / Edge Computing
+  venue_group: IEEE Internet Computing
+- id: 2020-archipelago-a-medical-distributed-storage-system-for-interconnec
+  year: 2020
+  authors: Haiwen Chen，Jiaping Yu，Fang Liu，Zhiping Cai，Jing Xia
+  title: 'Archipelago: A Medical Distributed Storage System for Interconnected Health'
+  venue_short: IEEE Internet Comput.
+  publication_info: 'IEEE Internet Computing, 2019, DOI: 10.1109/MIC.2019.2963182'
+  pdf: ''
+  category: Distributed / Federated / Edge Computing
+  venue_group: IEEE Internet Computing
+- id: 2020-an-alias-resolution-method-based-on-delay-sequence-analysis
+  year: 2020
+  authors: Tao Yang, Gang Hu, Bingnan Hou, Zhiping Cai, Jing Xia, CC Fong
+  title: An alias Resolution Method Based on Delay Sequence Analysis
+  venue_short: CMC
+  publication_info: CMC-COMPUTERS MATERIALS & CONTINUA, 2020, 63 (3), 1433-1443
+  pdf: ''
+  category: Network Telemetry & Systems
+  venue_group: CMC
+- id: 2020-an-opinion-spam-detection-method-based-on-multi-filters-convolut
+  year: 2020
+  authors: Ye Wang, B Liu, H Wu, S Zhao, Z Cai, D Li, CC Fong
+  title: An Opinion Spam Detection Method Based on Multi-Filters Convolutional Neural Network
+  venue_short: CMC
+  publication_info: CMC-COMPUTERS MATERIALS & CONTINUA 65 (1), 355-367 (SCI检索)
+  pdf: ''
+  category: Natural Language Processing
+  venue_group: CMC
+- id: 2020-unsupervised-anomaly-detection-via-dbscan-for-kpis-jitters-in-ne
+  year: 2020
+  authors: H Chen, G Yu, F Liu, Z Cai, A Liu, S Chen, H Huang, CF Cheang
+  title: Unsupervised Anomaly Detection via DBSCAN for KPIs Jitters in Network Managements
+  venue_short: CMC
+  publication_info: CMC-COMPUTERS MATERIALS & CONTINUA 2020, 62 (2), 917-927 .
+  pdf: ''
+  category: Network Telemetry & Systems
+  venue_group: CMC
+- id: 2020-adaptive-weighted-graph-fusion-incomplete-multi-view-subspace-cl
+  year: 2020
+  authors: Pei Zhang, Siwei Wang, Jingtao Hu, Zhen Cheng, Xifeng Guo, En Zhu, Zhiping Cai
+  title: Adaptive Weighted Graph Fusion Incomplete Multi-View Subspace Clustering
+  venue_short: Sensors
+  publication_info: 'Sensors 20(20): 5755 (2020)'
+  pdf: ''
+  category: Data Mining & Machine Learning
+  venue_group: Sensors
+- id: pub-2020-01
+  year: 2020
+  authors: 吴虹佳， 刘芳， 刘斌， 蔡志平
+  title: '分散计算: 技术, 应用与挑战'
+  venue_short: JFCST
+  publication_info: 计算机科学与探索 14 (5), 721-730.
+  pdf: ''
+  category: Distributed / Federated / Edge Computing
+  venue_group: 计算机科学与探索
+- id: pub-2020-04
+  year: 2020
+  authors: 郭子菁, 罗玉川, 蔡志平, 郑腾飞
+  title: 医疗健康大数据隐私保护综述
+  venue_short: JFCST
+  publication_info: 计算机科学与探索, 2020, 15 (3), 389-402.
+  pdf: ''
+  category: Network Security & Privacy
+  venue_group: 计算机科学与探索
+- id: pub-2020-22
+  year: 2020
+  authors: 郭子菁，罗玉川，蔡志平，郑腾飞
+  title: 医疗健康大数据隐私保护综述
+  venue_short: JFCST
+  publication_info: '计算机科学与探索, doi: 10.3778/j.issn.1673-9418.200907'
+  pdf: ''
+  category: Network Security & Privacy
+  venue_group: 计算机科学与探索
+- id: pub-2020-03
+  year: 2020
+  authors: 张培, 祝恩, 蔡志平
+  title: 单步划分融合多视图子空间聚类算法
+  venue_short: JFCST
+  publication_info: 计算机科学与探索, 2020, 1-9.
+  pdf: ''
+  category: Data Mining & Machine Learning
+  venue_group: 计算机科学与探索
+- id: pub-2020-02
+  year: 2020
+  authors: 陈睿龙, 罗磊, 蔡志平, 马文涛
+  title: 基于深度学习的实时吸烟检测算法
+  venue_short: JFCST
+  publication_info: 计算机科学与探索, 2020, 15 (2), 327-337
+  pdf: ''
+  category: Computer Vision & Multimedia
+  venue_group: 计算机科学与探索
+- id: 2020-computation-efficient-offloading-and-trajectory-scheduling-for-m
+  year: 2020
+  authors: Jiao Zhang, Li Zhou, Fuhui Zhou, Boon-Chong Seet, Haijun Zhang, Zhiping Cai, Jibo Wei
+  title: Computation-Efficient Offloading and Trajectory Scheduling for Multi-UAV Assisted Mobile Edge Computing
+  venue_short: TVT
+  publication_info: 'IEEE Transactions on Vehicular Technology. 69(2): 2114-2125 (2020)'
+  pdf: ''
+  category: Distributed / Federated / Edge Computing
+  venue_group: TVT

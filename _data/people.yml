@@ -39,8 +39,8 @@ people:
       - zh: "2025.09–至今 国防科技大学计算机学院，博士研究生"
         en: "2025.09–Present Ph.D. Student, College of Computer Science and Technology, National University of Defense Technology"
 
-    publications:
-      - '"Align Entities with Ontologies: LLM-enhanced Inductive Subgraph Reasoning over Ontology-based Knowledge Graphs" has been accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence (IEEE TPAMI).'
+    publications: []
+
     awards: []
 
     photo: "mengxuan-luo.jpg"

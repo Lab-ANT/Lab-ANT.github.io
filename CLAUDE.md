@@ -1,80 +1,41 @@
 # ANT Lab Website — Claude Code Instructions
 
-## Project
+## Core architecture
 
-This repository is the ANT Lab website hosted with GitHub Pages/Jekyll.
+Routine content is maintained through structured data:
 
-The People page is data-driven:
-
-- Member data: `_data/people.yml`
-- People page template: `people.html`
-- People page CSS: `assets/css/people.css`
+- Members: `_data/people.yml`
+- Publications: `_data/publications.yml`
+- Homepage News: `_data/news.yml`
 - Member photos: `assets/images/people/`
 
-Do not manually duplicate member records inside `people.html`.
+Templates render these files. During routine sync, do not modify HTML/CSS/JS unless explicitly requested.
+
+## General safety
+
+- Use explicit source data as facts.
+- Do not invent names, dates, emails, awards, publications, DOI, URLs, PDF paths, status, volume/pages, or other facts.
+- Report ambiguity instead of guessing.
+- Do not commit/push unless explicitly requested.
+- Validate edited YAML and show relevant `git diff`.
+
+Placeholder-only public content such as `XXXX`, `XXXX奖`, `待定`, or `待补充` must not be published.
 
 ---
 
-## People Sync Source
+## People
 
-The authoritative member-information source is Tencent Docs.
+Authoritative source: Tencent Docs `成果收集表`
 
-- Document name: 成果收集表
 - file_id: `aQscqvIUVkPI`
-- Sheet name: `Sheet1`
+- Sheet: `Sheet1`
 - sheet_id: `000001`
-- Document type: Tencent online Sheet (not SmartSheet)
 
-Use the configured `tencent-docs` MCP connection to read it.
+Columns: 姓名, 学位或职称, 入学/入组年份, 邮箱, 个人博客网址, 研究方向, 教育经历, 发表论文, 获奖情况, 个人照片.
 
-The first 10 columns are:
+Source of truth: `_data/people.yml`.
 
-1. 姓名
-2. 学位或职称
-3. 入学/入组年份
-4. 邮箱
-5. 个人博客网址(没有则填无)
-6. 研究方向
-7. 教育经历(可以不填)
-8. 发表论文(没有则填无)
-9. 获奖情况(没有则填无)
-10. 个人照片
-
-Ignore blank rows.
-
----
-
-## Photo Handling
-
-Tencent Sheet MCP cannot read JPG images inserted with the Sheet's built-in image insertion feature.
-
-Therefore:
-
-- Do not treat an unreadable photo cell as an error.
-- Do not attempt to modify the Tencent Sheet to work around this.
-- Photos are manually placed in `assets/images/people/`.
-- Generate the expected filename from the English-name ID:
-  - 罗梦轩 -> Mengxuan Luo -> `mengxuan-luo.jpg`
-- Store that filename in the member's `photo` field.
-- Never invent a different photo extension unless the actual repository file uses it.
-
----
-
-## Allowed Titles and Ordering
-
-The only allowed Chinese title/status values are:
-
-1. 教授
-2. 副教授
-3. 讲师
-4. 博士后
-5. 博士(已毕业)
-6. 博士研究生
-7. 硕士(已毕业)
-8. 硕士研究生
-9. 本科生
-
-The YAML must preserve:
+Allowed title order:
 
 ```yaml
 title_order:
@@ -89,324 +50,184 @@ title_order:
   本科生: 9
 ```
 
-Sort `people` by:
+Sort by title order, year ascending, Chinese name.
 
-1. `title_order`
-2. `year` ascending (earlier joining/enrollment year first)
-3. `name_zh` when year is equal
+Do not invent English names. Convert Chinese names to standard pinyin (`Given Name + Family Name`) unless ambiguous.
 
-If a title is not in the allowed list, do not guess. Report it for manual confirmation.
+Photos are manually maintained at `assets/images/people/<id>.jpg`; only check whether they exist.
+
+People-page publications contain only venue counts, not titles.
 
 ---
 
-## Field Conversion Rules
+## Global Publications
 
-### name_zh
+Source of truth: `_data/publications.yml`.
 
-Copy the Tencent Sheet value exactly.
+`publications.html` renders structured records.
+`assets/js/publications.js` is search/filter only and must not parse citations.
 
-### name_en
+Required fields:
 
-Convert the Chinese personal name to standard pinyin in:
-
-`Given Name + Family Name`
-
-Example:
-
-`罗梦轩 -> Mengxuan Luo`
+```yaml
+- id: "2026-example-paper"
+  year: 2026
+  venue_group: "IEEE S&P"
+  authors: "Author A, Author B, Zhiping Cai"
+  title: "Complete paper title"
+  venue_short: "IEEE S&P"
+  publication_info: "IEEE Symposium on Security and Privacy, 2026."
+  pdf: ""
+```
 
 Rules:
 
-- capitalize normally;
-- no tone marks;
-- family name last;
-- do not invent an unrelated English given name;
-- if pronunciation is genuinely ambiguous, flag it for manual confirmation.
+- `title` and `year` are required.
+- `authors` may temporarily be empty.
+- `venue_short` may be empty if unknown.
+- `venue_group` controls grouping; normally use `venue_short`.
+- `pdf` may be empty.
+- optional `date` must be explicit and use `YYYY-MM-DD`.
+- preserve complete title punctuation, including colons/subtitles.
+- never invent missing bibliographic facts.
 
-### id
+### Additional venue abbreviation normalization
 
-Generate from `name_en`:
+Use these established/common abbreviations when the source venue is unambiguous:
 
-- lowercase;
-- spaces become hyphens.
+- Computer Networks -> `Comput. Networks`
+- Computers & Security -> `Comput. Secur.`
+- IEEE Internet Computing -> `IEEE Internet Comput.`
+- Sensors -> `Sensors`
+- International Conference on Computer Engineering and Networks -> `CENet`
+- 计算机科学与探索 / Journal of Frontiers of Computer Science and Technology -> `JFCST`
 
-Example:
+Do not invent an acronym when no reliable abbreviation is known.
 
-`Mengxuan Luo -> mengxuan-luo`
+### Publication display order
 
-### title_zh
+The Publications page is **year-first**, matching the reference style.
 
-Copy exactly from Tencent Docs.
+Required order:
 
-### title_en
-
-Use only this mapping:
-
-- 教授 -> Professor
-- 副教授 -> Associate Professor
-- 讲师 -> Lecturer
-- 博士后 -> Postdoctoral Researcher
-- 博士(已毕业) -> Ph.D.
-- 博士研究生 -> Ph.D. Student
-- 硕士(已毕业) -> Master's Degree
-- 硕士研究生 -> Master's Student
-- 本科生 -> Undergraduate Student
-
-Do not freely rewrite these labels.
-
-### year
-
-Read directly from `入学/入组年份`.
-
-It must not be inferred from education history.
-
-### email
-
-Copy exactly from Tencent Docs.
-
-Do not correct, normalize, or guess an email address.
-
-### homepage
-
-Convert `无` or blank to:
-
-```yaml
-homepage: ""
-```
-
-Otherwise preserve the provided URL.
-
-### research
-
-Preserve Chinese research interests and create a faithful English translation.
+1. year descending (`2026`, then `2025`, then `2024`, ...);
+2. within each year, venue groups ordered by `venue_priorities`;
+3. all papers from the same `venue_group` must stay contiguous;
+4. within the same venue in the same year:
+   - explicit date descending when available;
+   - otherwise stable title order.
 
 Example:
 
-```yaml
-research:
-  zh:
-    - "具身智能安全"
-  en:
-    - "Embodied AI Safety"
+```text
+2026
+1. [IEEE S&P] ...
+2. [IEEE S&P] ...
+3. [USENIX Security] ...
+4. [ICML] ...
+5. [ICML] ...
+6. [AAAI] ...
+
+2025
+1. [IEEE S&P] ...
+2. [CCS] ...
+3. [TIFS] ...
+...
 ```
 
-If the source contains several interests separated by Chinese/English commas, semicolons, slashes, or line breaks, split them into separate list items when unambiguous.
+Do **not** group the page by research category.
 
-Do not add research areas not present in the source.
+`venue_priorities` in `_data/publications.yml` is the authoritative website display order.
 
-### education
+It is a site presentation preference, not a claim of universal academic ranking.
 
-Split distinct education entries into separate items.
+When a new venue appears:
 
-Use:
+- reuse an existing priority if present;
+- if priority is unclear, place it conservatively near the end and report it for review.
 
-```yaml
-education:
-  - zh: "..."
-    en: "..."
+After every publication sync run:
+
+```bash
+python3 scripts/sort_publications.py
 ```
 
-Allowed normalization:
+Deduplicate by DOI when known, otherwise normalized title + year.
 
-- punctuation;
-- spacing;
-- faithful English translation;
-- 至今 -> Present.
-
-Never change or invent:
-
-- dates;
-- university;
-- college/school;
-- degree/status.
-
-If blank:
-
-```yaml
-education: []
-```
-
-### publications
-
-The Tencent Sheet may contain complete publication citations, paper titles, journal/conference names, years, and other bibliographic text.
-
-The People page must NOT display full paper titles or full citations. It should display only normalized publication venue abbreviations and counts, similar to:
-
-`TNNLS × 2, INFOCOM × 1, AAAI × 1`
-
-If source is `无` or blank:
-
-```yaml
-publications: []
-```
-
-Otherwise:
-
-1. Parse only the publications explicitly provided in the Tencent Sheet.
-2. Extract the publication venue for each item.
-3. Normalize each venue to its standard/common abbreviation when the mapping is unambiguous.
-4. Merge entries with the same normalized venue.
-5. Store the number of papers in `count`.
-6. Preserve a special designation such as Spotlight, Oral, Highlight, or Best Paper only when that designation is explicitly written in the source.
-7. A venue with a special designation is counted separately from the ordinary venue.
-8. Do not store paper titles in `_data/people.yml` for People-page display.
-9. Do not search the internet for missing publications.
-10. Do not infer publications from the member's name.
-11. If the venue cannot be identified or its abbreviation is genuinely ambiguous, flag it for manual confirmation instead of guessing.
-
-Use this structure:
-
-```yaml
-publications:
-  - venue: "TNNLS"
-    count: 2
-  - venue: "INFOCOM"
-    count: 1
-  - venue: "NeurIPS"
-    note: "Spotlight"
-    count: 1
-```
-
-Normalization examples:
-
-- IEEE Transactions on Neural Networks and Learning Systems -> TNNLS
-- IEEE Transactions on Knowledge and Data Engineering -> TKDE
-- IEEE Transactions on Information Forensics and Security -> TIFS
-- IEEE/ACM Transactions on Networking -> ToN
-- IEEE Transactions on Parallel and Distributed Systems -> TPDS
-- IEEE Transactions on Mobile Computing -> TMC
-- IEEE Transactions on Multimedia -> TMM
-- IEEE Transactions on Image Processing -> TIP
-- IEEE Transactions on Dependable and Secure Computing -> TDSC
-- IEEE INFOCOM -> INFOCOM
-- AAAI Conference on Artificial Intelligence -> AAAI
-- International Joint Conference on Artificial Intelligence -> IJCAI
-- Neural Information Processing Systems / Advances in Neural Information Processing Systems -> NeurIPS
-- International Conference on Machine Learning -> ICML
-- International Conference on Learning Representations -> ICLR
-- ACM SIGKDD Conference on Knowledge Discovery and Data Mining -> KDD
-- The Web Conference / International World Wide Web Conference -> WWW
-- ACM SIGIR Conference on Research and Development in Information Retrieval -> SIGIR
-- ACM International Conference on Multimedia -> ACM MM
-- IEEE/CVF Conference on Computer Vision and Pattern Recognition -> CVPR
-- IEEE/CVF International Conference on Computer Vision -> ICCV
-- European Conference on Computer Vision -> ECCV
-- Annual Meeting of the Association for Computational Linguistics -> ACL
-- Conference on Empirical Methods in Natural Language Processing -> EMNLP
-- Network and Distributed System Security Symposium -> NDSS
-- ACM Conference on Computer and Communications Security -> CCS
-- USENIX Security Symposium -> USENIX Security
-- IEEE Symposium on Security and Privacy -> IEEE S&P
-
-These examples are normalization rules, not permission to invent a venue. The source publication text must support the mapping.
-
-When several spellings refer to the same venue, merge them. For example:
-
-`IEEE TNNLS`, `TNNLS`, and `IEEE Transactions on Neural Networks and Learning Systems`
-
-must all become one entry:
-
-```yaml
-- venue: "TNNLS"
-  count: 3
-```
-
-For deterministic output, keep venue groups in the order of their first appearance in the source after merging duplicates.
-
-### awards
-
-If source is `无` or blank:
-
-```yaml
-awards: []
-```
-
-Otherwise split clearly separate awards.
-
-Do not invent or web-search awards.
-
-### photo
-
-Set to:
-
-`<id>.jpg`
-
-unless an existing repository photo for that member uses a different extension.
+Do not remove historical publications merely because they are absent from the current Tencent Sheet.
 
 ---
 
-## Expected Member Schema
+## Homepage News
 
-```yaml
-people:
-  - id: "mengxuan-luo"
-    name_zh: "罗梦轩"
-    name_en: "Mengxuan Luo"
+Source of truth: `_data/news.yml`.
 
-    title_zh: "博士研究生"
-    title_en: "Ph.D. Student"
-    year: 2025
+News is sorted **only by event date descending**.
 
-    email: "luomengxuan21a@nudt.edu.cn"
-    homepage: ""
+Do not group News by venue, research category, or publication priority.
 
-    research:
-      zh:
-        - "具身智能安全"
-      en:
-        - "Embodied AI Safety"
+Only create dated News when the source explicitly supplies the date.
+Never substitute today's date for an unknown event date.
 
-    education:
-      - zh: "2021.09–2025.06 国防科技大学计算机学院，学士"
-        en: "2021.09–2025.06 B.S., College of Computer Science and Technology, National University of Defense Technology"
+Homepage should render:
 
-    publications:
-      - venue: "TNNLS"
-        count: 2
-      - venue: "INFOCOM"
-        count: 1
-    awards: []
-
-    photo: "mengxuan-luo.jpg"
+```liquid
+{% assign sorted_news = site.data.news.news | sort: "date" | reverse %}
+{% for item in sorted_news limit:6 %}
 ```
 
 ---
 
-## "同步课题组成员信息" Workflow
+## Routine workflows
 
-When the user asks to "同步课题组成员信息" or clearly requests a People-data sync:
+### 同步课题组成员信息
 
-1. Read the Tencent Sheet through `tencent-docs` MCP.
-2. Read all member rows needed to obtain the complete current dataset.
-3. Ignore the unreadable image-object content in column 10.
-4. Convert records using all rules in this file, including publication venue normalization and aggregation.
-5. Replace the `people` dataset in `_data/people.yml` with the current authoritative records from Tencent Docs.
-6. Preserve `title_order` exactly.
-7. Sort records using the required ordering.
-8. Validate that `_data/people.yml` parses as valid YAML.
-9. Check whether each expected `assets/images/people/<photo>` file exists and report missing photos; do not fabricate image files.
-10. Show `git diff -- _data/people.yml`.
+- read all non-empty Tencent rows;
+- update `_data/people.yml`;
+- sort correctly;
+- recompute People venue counts;
+- convert placeholder-only awards to `awards: []`;
+- validate YAML;
+- check member photos;
+- show `git diff -- _data/people.yml`.
 
-Unless the user explicitly asks otherwise:
+### 同步论文与新闻
 
-- do not modify Tencent Docs;
-- do not modify `people.html`;
-- do not modify CSS;
-- do not modify `_config.yml`;
-- do not modify unrelated files;
+- read member publication fields;
+- semantically extract structured publication records;
+- deduplicate;
+- update/add `_data/publications.yml`;
+- assign/reuse `venue_group`;
+- run `python3 scripts/sort_publications.py`;
+- recompute affected People venue counts;
+- update News only for explicitly dated events;
+- validate YAML;
+- report added/updated/duplicate/ambiguous records;
+- show `git diff -- _data/publications.yml _data/people.yml _data/news.yml`.
+
+### 同步课题组网站
+
+Run People sync, publication sync + sorting, awards, News, YAML validation, photo/path checks, duplicate checks, then show final summary and diff.
+
+---
+
+## Files not to touch during routine sync
+
+Unless explicitly requested, do not modify:
+
+- `index.html`
+- `people.html`
+- `publications.html`
+- `research.html`
+- `assets/css/*`
+- `assets/js/*`
+- `_config.yml`
+
+## Git safety
+
+Unless explicitly requested:
+
 - do not commit;
 - do not push;
 - do not force-push;
-- do not web-search member information.
-
-If source data is missing, ambiguous, or inconsistent, preserve known facts and report the issue rather than guessing.
-
----
-
-## Website Rendering
-
-`people.html` reads from `site.data.people.people` using Jekyll/Liquid.
-
-Do not reintroduce hard-coded member entries in HTML.
-
-When changing People data, prefer changes only to `_data/people.yml` unless the user explicitly requests a design/template change.
+- do not rewrite unrelated files.
