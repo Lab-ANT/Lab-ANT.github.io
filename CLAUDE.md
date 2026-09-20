@@ -228,15 +228,90 @@ education: []
 
 ### publications
 
+The Tencent Sheet may contain complete publication citations, paper titles, journal/conference names, years, and other bibliographic text.
+
+The People page must NOT display full paper titles or full citations. It should display only normalized publication venue abbreviations and counts, similar to:
+
+`TNNLS × 2, INFOCOM × 1, AAAI × 1`
+
 If source is `无` or blank:
 
 ```yaml
 publications: []
 ```
 
-Otherwise split clearly separate entries.
+Otherwise:
 
-Do not search the internet or infer publications from the member's name.
+1. Parse only the publications explicitly provided in the Tencent Sheet.
+2. Extract the publication venue for each item.
+3. Normalize each venue to its standard/common abbreviation when the mapping is unambiguous.
+4. Merge entries with the same normalized venue.
+5. Store the number of papers in `count`.
+6. Preserve a special designation such as Spotlight, Oral, Highlight, or Best Paper only when that designation is explicitly written in the source.
+7. A venue with a special designation is counted separately from the ordinary venue.
+8. Do not store paper titles in `_data/people.yml` for People-page display.
+9. Do not search the internet for missing publications.
+10. Do not infer publications from the member's name.
+11. If the venue cannot be identified or its abbreviation is genuinely ambiguous, flag it for manual confirmation instead of guessing.
+
+Use this structure:
+
+```yaml
+publications:
+  - venue: "TNNLS"
+    count: 2
+  - venue: "INFOCOM"
+    count: 1
+  - venue: "NeurIPS"
+    note: "Spotlight"
+    count: 1
+```
+
+Normalization examples:
+
+- IEEE Transactions on Neural Networks and Learning Systems -> TNNLS
+- IEEE Transactions on Knowledge and Data Engineering -> TKDE
+- IEEE Transactions on Information Forensics and Security -> TIFS
+- IEEE/ACM Transactions on Networking -> ToN
+- IEEE Transactions on Parallel and Distributed Systems -> TPDS
+- IEEE Transactions on Mobile Computing -> TMC
+- IEEE Transactions on Multimedia -> TMM
+- IEEE Transactions on Image Processing -> TIP
+- IEEE Transactions on Dependable and Secure Computing -> TDSC
+- IEEE INFOCOM -> INFOCOM
+- AAAI Conference on Artificial Intelligence -> AAAI
+- International Joint Conference on Artificial Intelligence -> IJCAI
+- Neural Information Processing Systems / Advances in Neural Information Processing Systems -> NeurIPS
+- International Conference on Machine Learning -> ICML
+- International Conference on Learning Representations -> ICLR
+- ACM SIGKDD Conference on Knowledge Discovery and Data Mining -> KDD
+- The Web Conference / International World Wide Web Conference -> WWW
+- ACM SIGIR Conference on Research and Development in Information Retrieval -> SIGIR
+- ACM International Conference on Multimedia -> ACM MM
+- IEEE/CVF Conference on Computer Vision and Pattern Recognition -> CVPR
+- IEEE/CVF International Conference on Computer Vision -> ICCV
+- European Conference on Computer Vision -> ECCV
+- Annual Meeting of the Association for Computational Linguistics -> ACL
+- Conference on Empirical Methods in Natural Language Processing -> EMNLP
+- Network and Distributed System Security Symposium -> NDSS
+- ACM Conference on Computer and Communications Security -> CCS
+- USENIX Security Symposium -> USENIX Security
+- IEEE Symposium on Security and Privacy -> IEEE S&P
+
+These examples are normalization rules, not permission to invent a venue. The source publication text must support the mapping.
+
+When several spellings refer to the same venue, merge them. For example:
+
+`IEEE TNNLS`, `TNNLS`, and `IEEE Transactions on Neural Networks and Learning Systems`
+
+must all become one entry:
+
+```yaml
+- venue: "TNNLS"
+  count: 3
+```
+
+For deterministic output, keep venue groups in the order of their first appearance in the source after merging duplicates.
 
 ### awards
 
@@ -285,7 +360,11 @@ people:
       - zh: "2021.09–2025.06 国防科技大学计算机学院，学士"
         en: "2021.09–2025.06 B.S., College of Computer Science and Technology, National University of Defense Technology"
 
-    publications: []
+    publications:
+      - venue: "TNNLS"
+        count: 2
+      - venue: "INFOCOM"
+        count: 1
     awards: []
 
     photo: "mengxuan-luo.jpg"
@@ -300,7 +379,7 @@ When the user asks to "同步课题组成员信息" or clearly requests a People
 1. Read the Tencent Sheet through `tencent-docs` MCP.
 2. Read all member rows needed to obtain the complete current dataset.
 3. Ignore the unreadable image-object content in column 10.
-4. Convert records using all rules in this file.
+4. Convert records using all rules in this file, including publication venue normalization and aggregation.
 5. Replace the `people` dataset in `_data/people.yml` with the current authoritative records from Tencent Docs.
 6. Preserve `title_order` exactly.
 7. Sort records using the required ordering.
