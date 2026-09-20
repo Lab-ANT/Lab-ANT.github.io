@@ -86,11 +86,18 @@ Members of ANT Lab are listed by academic title or degree status, and then by jo
       {% if person.publications and person.publications.size > 0 %}
       <div class="person-section">
         <span class="person-section-title">Publications:</span>
-        <ul class="person-list-plain">
-          {% for item in person.publications %}
-          <li>{{ item }}</li>
+        <div class="person-publications">
+          {% for pub in person.publications %}
+            {% if pub.venue %}
+              <span class="publication-entry">
+                <strong>{{ pub.venue }}{% if pub.note and pub.note != "" %} ({{ pub.note }}){% endif %}</strong>
+                {% if pub.count %}&times; {{ pub.count }}{% endif %}
+              </span>{% unless forloop.last %}<span class="publication-separator">, </span>{% endunless %}
+            {% else %}
+              <span class="publication-entry">{{ pub }}</span>{% unless forloop.last %}<span class="publication-separator">, </span>{% endunless %}
+            {% endif %}
           {% endfor %}
-        </ul>
+        </div>
       </div>
       {% endif %}
 
