@@ -106,6 +106,24 @@
   color: #444;
 }
 
+.person-publications {
+  margin-top: 6px;
+  line-height: 1.65;
+  color: #222;
+}
+
+.publication-entry {
+  white-space: normal;
+}
+
+.publication-entry strong {
+  font-weight: 600;
+}
+
+.publication-separator {
+  color: #666;
+}
+
 .person-list-plain {
   margin: 6px 0 0 18px;
   padding: 0;
