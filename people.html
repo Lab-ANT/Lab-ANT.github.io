@@ -59,6 +59,16 @@ Members of Cai's Lab are listed by academic title or degree status, and then by 
             <img class="person-photo"
                  src="assets/images/people/{{ person.photo }}"
                  alt="{{ person.name_en }}" />
+            {% else %}
+            {% assign initials_words = person.name_en | split: " " %}
+            <div class="person-photo person-photo-placeholder" aria-label="{{ person.name_en }}">
+              <div class="person-photo-initials">
+                {% for word in initials_words limit:2 %}
+                  {{ word | slice: 0, 1 }}
+                {% endfor %}
+              </div>
+              <div class="person-photo-label">No Photo</div>
+            </div>
             {% endif %}
           </div>
 

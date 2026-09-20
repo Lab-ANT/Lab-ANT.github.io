@@ -1,124 +1,159 @@
-/* People page styles */
 
 .people-page {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding-bottom: 24px;
+  max-width: 1100px;
 }
 
 .people-intro {
-  max-width: 760px;
-  margin: -14px 0 38px;
-  color: var(--muted, #657184);
-  font-size: 1.12rem;
-  line-height: 1.75;
+  margin: 0 0 24px;
+  color: #58677a;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .people-group {
-  margin: 0 0 48px;
+  margin: 0 0 42px;
 }
 
 .people-group-title {
-  margin: 0 0 8px;
-  padding: 0 0 13px;
-  border-bottom: 1px solid var(--border, #e3e8ef);
-  color: #1e293b;
-  font-size: 1.68rem;
-  font-weight: 740;
-  letter-spacing: -0.025em;
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dbe3ec;
+  color: #1f2f44;
+  font-size: 1.55rem;
+  font-weight: 760;
 }
 
 .people-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  gap: 22px;
 }
 
 .person-card {
   display: grid;
-  grid-template-columns: 176px minmax(0, 1fr);
-  gap: 30px;
-  padding: 28px 0;
-  border-bottom: 1px solid #e9edf2;
-  background: transparent;
-}
-
-.person-card:last-child {
-  border-bottom: 0;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 24px;
+  padding: 24px;
+  border: 1px solid #dbe3ec;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(19, 42, 72, 0.05);
 }
 
 .person-photo-wrap {
-  width: 176px;
+  width: 220px;
 }
 
 .person-photo {
   display: block;
-  width: 176px;
-  height: 222px;
+  width: 220px;
+  height: 260px;
   object-fit: cover;
-  border: 1px solid #e0e6ee;
-  border-radius: 11px;
-  background: #edf2f7;
-  box-shadow: 0 7px 18px rgba(30, 58, 95, 0.08);
+  border-radius: 14px;
+  background: #eef3f8;
+}
+
+.person-photo-placeholder {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.25), transparent 28%),
+    linear-gradient(135deg, #e8f1fb 0%, #d6e5f7 48%, #edf4fb 100%);
+  border: 1px solid #d7e2ef;
+  color: #26476d;
+}
+
+.person-photo-placeholder::after {
+  content: "";
+  position: absolute;
+  right: -18px;
+  bottom: -22px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  border: 1px solid rgba(37, 99, 235, 0.12);
+}
+
+.person-photo-initials {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.person-photo-label {
+  position: relative;
+  z-index: 1;
+  font-size: 0.92rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #5a6f87;
 }
 
 .person-info {
   min-width: 0;
-  padding-top: 2px;
 }
 
 .person-name {
-  margin: 0 0 5px;
-  padding: 0;
-  border: 0;
-  color: var(--primary, #1f4e79);
-  font-size: 1.72rem;
-  font-weight: 700;
-  line-height: 1.25;
+  margin: 0 0 6px;
+  color: #1c2d42;
+  font-size: 1.6rem;
+  font-weight: 780;
+  line-height: 1.2;
 }
 
 .person-name-zh {
-  margin-left: 8px;
-  color: #7a8695;
-  font-size: 0.68em;
-  font-weight: 500;
+  margin-left: 10px;
+  color: #5f7186;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .person-meta {
-  margin-bottom: 16px;
-  color: #667386;
-  font-size: 1.06rem;
+  margin-bottom: 14px;
+  color: #4e6277;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .person-section {
-  margin-top: 13px;
-  color: #344154;
+  margin: 0 0 12px;
+  line-height: 1.7;
 }
 
 .person-section-title {
-  display: inline-block;
-  margin-bottom: 4px;
-  color: #253247;
-  font-weight: 700;
+  display: block;
+  margin-bottom: 6px;
+  color: #1f2f44;
+  font-weight: 720;
 }
 
 .person-tags {
-  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .person-tag {
   display: inline-block;
-  margin: 0 7px 7px 0;
-  padding: 3px 9px;
-  border: 1px solid #d6e1ee;
-  border-radius: 7px;
-  background: #f4f8fc;
-  color: #315f8e;
-  font-size: 0.98rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #edf4fb;
+  color: #2f557f;
+  font-size: 0.93rem;
+  font-weight: 620;
 }
 
 .person-list-plain {
-  margin: 4px 0 0 19px;
-  padding: 0;
+  margin: 0;
+  padding-left: 18px;
 }
 
 .person-list-plain li {
@@ -126,72 +161,64 @@
 }
 
 .person-publications {
-  margin-top: 3px;
-  color: #2b3647;
-  line-height: 1.7;
-}
-
-.publication-entry {
-  white-space: normal;
+  color: #34475c;
+  line-height: 1.75;
 }
 
 .publication-entry strong {
-  color: var(--primary-strong, #173d61);
-  font-weight: 700;
+  color: #1f4d8d;
 }
 
 .publication-separator {
-  color: #8a94a3;
+  color: #8a98aa;
 }
 
 .person-links {
+  margin-top: 14px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 16px;
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px dashed #e1e7ed;
+  gap: 14px;
+  align-items: center;
 }
 
 .person-email {
-  color: #4b586a;
+  color: #31475f;
+  font-weight: 600;
 }
 
 .person-links a {
   font-weight: 650;
 }
 
-@media (max-width: 760px) {
-  .people-intro {
-    margin-bottom: 28px;
-  }
-
-  .people-group {
-    margin-bottom: 36px;
-  }
-
+@media (max-width: 900px) {
   .person-card {
     grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 24px 0;
   }
 
   .person-photo-wrap,
   .person-photo {
-    width: 152px;
+    width: 100%;
   }
 
   .person-photo {
-    height: 192px;
+    max-width: 280px;
+    height: 300px;
   }
 }
 
+@media (max-width: 640px) {
+  .person-card {
+    padding: 18px;
+    gap: 18px;
+  }
 
-/* V6 typography scale */
-.person-section,
-.person-list-plain,
-.person-publications,
-.person-links,
-.person-email {
-  font-size: 1.02rem;
+  .person-name {
+    font-size: 1.35rem;
+  }
+
+  .person-name-zh {
+    display: block;
+    margin: 8px 0 0;
+    margin-left: 0;
+  }
 }
