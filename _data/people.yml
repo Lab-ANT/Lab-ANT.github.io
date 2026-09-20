@@ -39,7 +39,37 @@ people:
       - zh: "2025.09–至今 国防科技大学计算机学院，博士研究生"
         en: "2025.09–Present Ph.D. Student, College of Computer Science and Technology, National University of Defense Technology"
 
-    publications: []
+    publications:
+      - '"Align Entities with Ontologies: LLM-enhanced Inductive Subgraph Reasoning over Ontology-based Knowledge Graphs" has been accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence (IEEE TPAMI).'
     awards: []
 
     photo: "mengxuan-luo.jpg"
+
+  - id: "senxin-wang"
+
+    name_zh: "王森鑫"
+    name_en: "Senxin Wang"
+
+    title_zh: "博士研究生"
+    title_en: "Ph.D. Student"
+    year: 2025
+
+    email: "223767393@qq.com"
+    homepage: ""
+
+    research:
+      zh:
+        - "智慧医疗"
+      en:
+        - "Smart Healthcare"
+
+    education:
+      - zh: "2021.09–2025.06 东北林业大学，学士"
+        en: "2021.09–2025.06 B.S., Northeast Forestry University"
+      - zh: "2025.09–至今 国防科技大学计算机学院，博士研究生"
+        en: "2025.09–Present Ph.D. Student, College of Computer Science and Technology, National University of Defense Technology"
+
+    publications: []
+    awards: []
+
+    photo: "senxin-wang.jpg"
